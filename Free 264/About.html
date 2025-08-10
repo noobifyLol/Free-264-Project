@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <link rel="icon" type="image/png" href="pictures/falv.png">
+  <link rel="stylesheet" href="wes.css">
+
+  <title>Free Store</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="author" content="...;">
+  <script src="https://kit.fontawesome.com/80567f4de0.js" crossorigin="anonymous"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100..700;1,100..700&family=Raleway:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@400;700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+  <div class="wrapper">
+<header class="Homesec1">
+      <h1 class = "mainhead">NWHS Free Store</h1>
+
+      <nav class="dropdown">
+        <div class="menu-toggle">
+  <span></span>
+  <span></span>
+  <span></span>
+        </div>
+        <ul>
+          <li><a href= "Home.html" >Home</a></li>
+          <li><a href="Donate.html">Donate</a></li>
+          <li><a href="About.html" id = "active">About us</a></li>
+          <li><a href="Contact.html">Contact</a></li>
+        </ul>
+      </nav>
+      <img src = "pictures/logo.png" class = "logo" height = '100px' width="100px">
+    </header>
+
+    <div class = progress>
+      <h> Work in Progress</h>
+    </div>
+   
+<footer class="footer">
+  <div class="footer-container">
+    <div class="footer-logo">
+      <img src="pictures/freelog.png" alt="Logo" height="100" width="100">
+      <p>Non-Profit Club</p>
+      <p>&copy; 2025 NWHS Free Store Club</p>
+    </div>
+    <div class="footer-text">
+      <p>Donate to us if you can! </p>
+      <div class = div2>
+      <i class="fa-solid fa-arrow-right"></i>
+      <a href="Donate.html">Donate!</a>
+      </div>
+      
+      </div>
+
+      <div class="social-icons">
+        <p>Contact Us! </p>
+        <div class = "social">
+        <a href="https://www.instagram.com/nwfreestore/" target="_blank">
+          <i class="fa-brands fa-instagram fa-10x5"></i>
+        </a>
+        <a href="mailto:someone@example.com"><i class="fa-solid fa-envelope"></i>
+        </a>
+        </div>
+      </div>
+    
+  </div>
+</footer>
+
+<script>  
+  const menuToggle = document.querySelector(".menu-toggle");
+  const menu = document.querySelector(".dropdown ul");
+  menuToggle.addEventListener("click", () => {
+    menu.classList.toggle("show");
+    menuToggle.classList.toggle("open"); // for the hamburger X animation
+  });</script>
+</body>
+</html>
