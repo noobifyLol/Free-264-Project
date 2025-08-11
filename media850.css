@@ -37,6 +37,8 @@
     flex-direction: row; /* Keep logo and menu toggle in a row */
     justify-content: space-between;
     align-items: center;
+    border-bottom : 3px solid orange;
+    z-index: 999;
   }
   .logo{
     transform: translateY(-85px);
@@ -69,6 +71,7 @@
     max-height: 0;               /* hidden initially */
     overflow: hidden;
     transition: max-height 0.4s ease;
+    z-index: 3;
     
   }
   .dropdown hr{
@@ -76,7 +79,7 @@
   }
   /* Show menu with animation */
   .dropdown ul.show {
-    max-height: 500px;           /* expands smoothly */
+    max-height: 400px;           /* expands smoothly */
   }
 
   .menu-toggle {
@@ -92,13 +95,20 @@
     padding: 15px;
     border-bottom: 1px solid #444;
     z-index: 999;
-    font-size: 30px;
+    font-size: clamp (20px , 2vw, 30px);
     width : 100%;
-
+    box-sizing: border-box; /* Include padding in width */
+    display: block;
   }
-   .divi{
-    position : absolute;
+  #divx , #divi{
+    padding: 20px;
+    margin: 20px 10px;
+    width: auto;
   }
+  #divx{
+    margin-top : 50px;
+  }
+   
   .footer-container{
     align-items: center;
     text-align: center;
@@ -106,7 +116,7 @@
     flex-direction: column;
     flex-wrap: nowrap;
   }
-  .footer-text{
-    margin-left : auto;
+  .footer-text p{
+    margin-left : 75px;
   }
 }

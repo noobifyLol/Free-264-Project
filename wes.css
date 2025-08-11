@@ -637,15 +637,6 @@ content: "";
     flex: 1;
   }
 }
-/* Hide hamburger by default (desktop view) */
-.menu-toggle {
-  display: none;
-  font-size: 35px;
-  color: white;
-  cursor: pointer;
-  padding: 10px;
-  transform: translateY(8px);
-  margin-right : 10px;
-}
+
 
 
