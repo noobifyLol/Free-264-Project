@@ -50,13 +50,13 @@ main {
 .dropdown hr{
   border: none;
   width: 2px;
-  height: auto;
+    margin: 10px 0;
   background-color: white; /* vertical separator between links */
-  margin: 0;
   margin-left : auto;
   margin-right : auto;
    gap: clamp(1px, 2vw, 5px);
-     height:clamp(30px, 2vw, 100px);   
+  height:clamp(30px, 2vw, 50px);   
+
 
 
    
@@ -396,7 +396,7 @@ content: "";
   padding: 2px 0;
   min-width: 100px;
   color: rgb(212, 166, 81);
-  font-size: 35px;                 /* smaller for better balance */
+  font-size: clamp(25px, 2vw,35px);                 /* smaller for better balance */
   font-weight: bold;                /* normal weight, not too heavy */
   text-align: center;              /* center looks better in footer */
   font-family: "Josefin Sans", sans-serif;
@@ -644,75 +644,8 @@ content: "";
   color: white;
   cursor: pointer;
   padding: 10px;
+  transform: translateY(8px);
+  margin-right : 10px;
 }
 
-/* Small screen rules */
-@media (max-width: 850px) {
-  .Homesec1{
-    flex-wrap : nowrap;
-  }
-  .logo{
-    transform: translateY(-85px);
-    height: 68%;
-    width : 12%;
-    border : 3px solid rgb(68, 67, 67);
-      margin-top : clamp(0.1xp, 4vw, 1px);
-  }
-  .dropdown{
-    margin-right: auto;
-  }
-  .dropdown ul {
-    display: flex;               /* always flex for animation */
-    flex-direction: column;
-    background: rgb(245, 146, 8);
-    position: absolute;
-    top: 100%;
-    left: 0;
-    gap: 0;
-    width: 100%;
-    z-index: 5;
-    white-space: nowrap;
-    max-height: 0;               /* hidden initially */
-    overflow: hidden;
-    transition: max-height 0.4s ease;
-    
-  }
 
-  /* Show menu with animation */
-  .dropdown ul.show {
-    max-height: 500px;           /* expands smoothly */
-  }
-
-  .menu-toggle {
-    display: block;
-  }
-
-  .dropdown a {
-    float: none;
-    margin: 0px;
-    text-align: center;
-    border-radius: 0;
-    border: none;
-    padding: 15px;
-    border-bottom: 1px solid #444;
-    z-index: 999;
-    font-size: 30px;
-    width : 100%;
-
-  }
-   .divi{
-    position : absolute;
-  }
-  .footer-container{
-    align-items: center;
-    text-align: center;
-    justify-content: center;
-    flex-direction: column;
-    flex-wrap: nowrap;
-  }
-  .footer-text{
-    margin-left : auto;
-  }
-}
-
- 

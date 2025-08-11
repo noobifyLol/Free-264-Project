@@ -1,0 +1,112 @@
+@media (min-width: 850px) {
+  .footer-container {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    text-align: left;
+    
+  }
+
+  #divx{
+    flex : 1;
+    align-items: center;
+  }
+  
+  .footer-logo,
+  .footer-text {
+    flex: 1;
+  }
+}
+/* Hide hamburger by default (desktop view) */
+.menu-toggle {
+  display: none;
+  font-size: 35px;
+  color: white;
+  cursor: pointer;
+  padding: 10px;
+  transform: translateY(8px);
+  margin-right : 10px;
+}
+
+/* Small screen rules */
+@media (max-width: 850px) {
+  .Homesec1{
+    flex-wrap : nowrap;
+    height: auto; /* Make height flexible */
+    padding: 10px;
+    flex-direction: row; /* Keep logo and menu toggle in a row */
+    justify-content: space-between;
+    align-items: center;
+  }
+  .logo{
+    transform: translateY(-85px);
+    height: 68%;
+    width : 12%;
+    border : 3px solid rgb(68, 67, 67);
+    transform: none; /* Remove negative translation */
+    position: static;
+    margin: 0;
+    width: 60px;
+    height: 60px;
+    border: 2px solid rgb(68, 67, 67);
+  }
+  .dropdown{
+    margin-right: auto;
+  }
+  .dropdown ul {
+        
+    position: fixed; /* Changed from absolute to fixed for better mobile behavior */
+    top: 80px;         /* always flex for animation */
+    flex-direction: column;
+    background: rgb(245, 146, 8);
+    position: absolute;
+    top: 100%;
+    left: 0;
+    gap: 0;
+    width: 100%;
+    z-index: 5;
+    white-space: nowrap;
+    max-height: 0;               /* hidden initially */
+    overflow: hidden;
+    transition: max-height 0.4s ease;
+    
+  }
+  .dropdown hr{
+    display :none;
+  }
+  /* Show menu with animation */
+  .dropdown ul.show {
+    max-height: 500px;           /* expands smoothly */
+  }
+
+  .menu-toggle {
+    display: block;
+  }
+
+  .dropdown a {
+    float: none;
+    margin: 0px;
+    text-align: center;
+    border-radius: 0;
+    border: none;
+    padding: 15px;
+    border-bottom: 1px solid #444;
+    z-index: 999;
+    font-size: 30px;
+    width : 100%;
+
+  }
+   .divi{
+    position : absolute;
+  }
+  .footer-container{
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+    flex-direction: column;
+    flex-wrap: nowrap;
+  }
+  .footer-text{
+    margin-left : auto;
+  }
+}
