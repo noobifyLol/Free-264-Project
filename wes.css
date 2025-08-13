@@ -592,6 +592,21 @@ content: "";
   ) 20;             /* slice the gradient to repeat */
 
 }
+#copy{
+  display : flex;
+
+}
+#copy p{
+  max-width: 1000px;
+  margin-right : 100px;
+  padding-right : 100px;
+  padding-bottom : 100px;
+}
+#copy img{
+  height : 250px;
+  width : 350px;
+  flex : 1;
+}
 
 .card:hover {
   transform: translateY(-5px); /* hover floating effect */
