@@ -3,7 +3,7 @@
 html, body {
   height: 100%;
   margin: 0;
-  background-color: rgb(255, 254, 217);
+  background-color: rgb(255, 254, 209);
 }
 
 
@@ -637,12 +637,15 @@ content: "";
   font-size: 30px;
   padding : 15px;
   margin : 100px;
-
-  transition: transform 0.3s;
-  animation: float 3s ease-in-out infinite;
-  gap : 100px;
+  gap : clamp(30px,10vw,100px);
   text-align: center;
   align-items: center;
+  width : 100%;
+}
+#boxes p{
+  padding : 20px;
+  font-size: clamp(14px, 2vw, 30px);
+
 }
 #box1{
   margin-right : 100px;
@@ -650,12 +653,15 @@ content: "";
     box-shadow: 0 4px 15px rgba(0,0,0,0.1);
       border-radius: 15px;
   border : 2px solid black;
+  width : 500px;
+  transform: translateY(-16px);
 }
 #box2{
   background-color: white;
     box-shadow: 0 4px 15px rgba(0,0,0,0.1);
       border-radius: 15px;
   border : 2px solid black;
+   width : 500px;
 }
 #boxes img{
   width : 300px;
