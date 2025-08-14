@@ -3,7 +3,7 @@
 html, body {
   height: 100%;
   margin: 0;
-  background-color: rgb(236, 250, 249);
+  background-color: rgb(255, 254, 217);
 }
 
 
@@ -136,13 +136,13 @@ align-items: center;
   position: relative;
   z-index: 1;
   padding: 40px;
-  border-radius: 15px;
+
   margin-top: 50px;
   color: white;
   box-shadow: 0 0 20px rgba(255, 140, 0, 0.4);
   overflow: hidden;
    padding: 40px;
-  border-radius: 15px;
+
   margin-top : 50px;
   color: white;
   box-shadow: 0 0 20px rgba(255, 140, 0, 0.4);
@@ -593,19 +593,73 @@ content: "";
 
 }
 #copy{
-  display : flex;
+  display: flex;
+  flex-wrap: nowrap; /* allows stacking on smaller screens */
+  align-items: center;
+  justify-content: space-between;
+  max-width: 1200px;
+  gap: 30px; /* space between text and images */
 
 }
 #copy p{
-  max-width: 1000px;
-  margin-right : 100px;
-  padding-right : 100px;
-  padding-bottom : 100px;
+   padding : clamp(10px,7vw, 30px);
+   flex : 1 1 500px;
 }
-#copy img{
-  height : 250px;
-  width : 350px;
-  flex : 1;
+#img{
+  width: clamp(200px, 20vw, 575px);
+  height: clamp(100px, 15vw, 375px);
+  flex: 1 1 400px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  align-items: flex-start;
+  position : relative;
+  flex-wrap : nowrap;
+  white-space: nowrap;
+  border-radius: 10px;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.3);
+  
+}
+#img1{
+  
+  position: relative;
+}
+#img2{
+  transform: translateX(75px) translateY(35px);
+  z-index: 10;
+
+
+}
+#boxes{
+  margin-top : 20px;
+  display : flex;
+  flex-direction: row;
+  font-size: 30px;
+  padding : 15px;
+  margin : 100px;
+
+  transition: transform 0.3s;
+  animation: float 3s ease-in-out infinite;
+  gap : 100px;
+  text-align: center;
+  align-items: center;
+}
+#box1{
+  margin-right : 100px;
+  background-color: white;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+      border-radius: 15px;
+  border : 2px solid black;
+}
+#box2{
+  background-color: white;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+      border-radius: 15px;
+  border : 2px solid black;
+}
+#boxes img{
+  width : 300px;
+  height : 300px;
 }
 
 .card:hover {
