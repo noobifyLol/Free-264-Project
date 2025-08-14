@@ -139,6 +139,9 @@
 
 
   }
+  #boxes{
+    flex-direction: column;
+  }
 
   
   #copy{
