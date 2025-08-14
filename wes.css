@@ -215,6 +215,7 @@ align-items: center;
     font-weight : 600;
     margin-top : 10px;
     color-scheme: orange, yellow, white;
+    text-align: center;
 }
 
 
@@ -427,7 +428,7 @@ content: "";
   padding: 10px;
   font-size: 25px;
   color: rgb(255, 255, 255);
-  font-family :fantasy;
+  font-family: 'Orbitron';
   background-color: rgb(253, 156, 0);
   border-radius: 10px;
   cursor: pointer;
@@ -642,11 +643,14 @@ content: "";
   position: absolute;
   margin-right : 10px;
   z-index: 11;
+      height : clamp(150px, 15vw, 500px);
+    width : clamp(250px, 25vw, 725px);
 }
 #img2{
   transform: translateX(75px) translateY(35px);
   z-index: 10;
-
+      height : clamp(150px, 15vw, 500px);
+    width : clamp(250px, 25vw, 725px);
 
 }
 
@@ -720,6 +724,7 @@ content: "";
   background-color: rgb(245, 245, 209);
 }
 .background h1{
+  position : relative;
   text-align: center;
   font-size: clamp(35px, 7vw, 56px);
   font-family: 'Josefin Sans', 'Montserrat', Arial, sans-serif;

@@ -1,4 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@500&display=swap');
 @media (min-width: 850px) {
   .footer-container {
     flex-direction: row;
@@ -142,12 +143,13 @@
     margin-left : 35px;
   }
   .footer-text a{
-    font-family :fantasy;
+    font-family: 'Orbitron'
   }
-  #img{
-  width: clamp(200px, 20vw, 575px);
-  height: clamp(100px, 15vw, 375px);
-  }
+  #copy img {
+        width : clamp(200px,15vw,350px);
+        max-width: 800px; /* remove limit */
+        height: clamp(150px,15vw, 250px); /* keep aspect ratio */
+    }
   #boxes{
     flex-direction: column;
     align-items: center;
@@ -164,6 +166,10 @@
      flex-flow: column;
      align-content: center;
      max-height: 500px;
+  }
+  #img1 #img2{
+     height : clamp(150px, 15vw, 250px);
+    width : clamp(250px, 25vw, 325px);
   }
   #img{
     transform: translateY(-100px);
