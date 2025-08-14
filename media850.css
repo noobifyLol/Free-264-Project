@@ -139,13 +139,25 @@
 
 
   }
+  #img{
+  width: clamp(200px, 20vw, 575px);
+  height: clamp(100px, 15vw, 375px);
+  }
   #boxes{
     flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    margin-bottom: 0px;
   }
+  #box1{
 
+  }
   
   #copy{
      flex-direction: column;
+     flex-flow: column;
+     align-content: center;
      max-height: 500px;
   }
   #img{

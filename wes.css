@@ -621,8 +621,8 @@ content: "";
    flex : 1 1 500px;
 }
 #img{
-  width: clamp(200px, 20vw, 575px);
-  height: clamp(100px, 15vw, 375px);
+  width: clamp(200px, 30vw, 450px);
+  height: clamp(100px, 25vw, 200px);
   flex: 1 1 400px;
   display: flex;
   flex-direction: column;
@@ -651,11 +651,11 @@ content: "";
   flex-direction: row;
   font-size: 30px;
   padding : 15px;
-  margin : 100px;
+  margin : clamp(50px, 25vw,100px);
   gap : clamp(30px,10vw,100px);
   text-align: center;
-  align-items: center;
-  width : 100%;
+  align-items :first baseline;
+  width : auto;
   flex : 1 1 500px;
 
 }
@@ -665,27 +665,34 @@ content: "";
 
 }
 #box1{
-  margin-right : 100px;
+
   background-color: white;
-    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+    box-shadow: 0 4px 15px rgba(0,0,0,0.3);
       border-radius: 15px;
   border : 2px solid black;
-  width : 500px;
-  transform: translateY(-16px);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    z-index : 1;
 }
 #box2{
   background-color: white;
-    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+    box-shadow: 0 4px 15px rgba(0,0,0,0.3);
       border-radius: 15px;
   border : 2px solid black;
-   width : 500px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
    z-index: 1;
 }
 #boxes img{
   width : 300px;
   height : 300px;
 }
-
+#box1:hover{
+   transform: translateY(-5px);
+   box-shadow: 0 4px 15px rgba(0,0,0,0.7);
+}
+#box2:hover{
+  transform: translateY(-5px);
+  box-shadow: 0 4px 15px rgba(0,0,0,0.7);
+}
 .card:hover {
   transform: translateY(-5px); /* hover floating effect */
 }
