@@ -62,13 +62,14 @@
         </div>  
       </main>
 </div>
-
+<div class = background>
+  <h1> How we Operate</h1>
 <div id = boxes>
-  <div id = box1>
+  <div class = box id = box1>
     <img src = "pictures/pro.png">
   <p> Talk about how we work blah blah. Lorem ipsum dolor sit amet consectetur adipisicing elit. Ratione ab itaque laborum architecto quos dolore saepe officiis iure unde natus provident odit, repudiandae nihil expedita ut fugit aliquid, sunt eaque?</p>
 </div>
-<div id = box2 >
+<div class = box id = box2 >
   <img src = "pictures/pro.png">
   <p>  Same thing talk about how we work on things how we set up the mall and stuff. Lorem ipsum dolor sit amet consectetur adipisicing elit. Ratione ab itaque laborum architecto quos dolore saepe officiis iure unde natus provident odit, repudiandae nihil expedita ut fugit aliquid, sunt eaque?</p>
 </div> <!--- box2 end --->
@@ -104,13 +105,28 @@
     
   </div>
 </footer>
-
+</div>
 <script>  
   const menuToggle = document.querySelector(".menu-toggle");
   const menu = document.querySelector(".dropdown ul");
   menuToggle.addEventListener("click", () => {
     menu.classList.toggle("show");
     menuToggle.classList.toggle("open"); // for the hamburger X animation
-  });</script>
+  });
+  </script>
+  <script>document.addEventListener('DOMContentLoaded', () => {
+  const boxes = document.querySelectorAll('#boxes .box');
+
+  const observer = new IntersectionObserver(entries => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('show');
+        observer.unobserve(entry.target); // animate only once
+      }
+    });
+  }, { threshold: 0.1 });
+
+  boxes.forEach(box => observer.observe(box));
+});</script>
 </body>
 </html>
