@@ -173,17 +173,12 @@
     text-align: center;
     margin-bottom: 0px;
   }
-  #box1{
-
-  }
   
   #copy{
-     flex-direction: column;
-     flex-flow: column;
-     align-content: center;
+     flex-direction: row;
      max-height: 500px;
   }
-  #img1 #img2{
+  #img1 ,#img2{
      height : clamp(150px, 15vw, 250px);
     width : clamp(250px, 25vw, 325px);
     object-fit: cover; /* fills the box, cropping if needed */
@@ -191,9 +186,5 @@
   }
   #img{
     transform: translateY(-100px);
-  }
-  #copy p{
-    margin-bottom : 0;
-
   }
 }

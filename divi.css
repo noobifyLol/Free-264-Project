@@ -4,10 +4,9 @@
   display: flex;
   flex-direction: row;      /* text left, image right */
   align-items: flex-start;
-  justify-content: space-between;
   gap: 20px;
   padding: 20px;
-  flex-wrap: wrap;          /* allows wrapping on smaller screens */
+
 }
 
 #copy p {
