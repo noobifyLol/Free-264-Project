@@ -126,6 +126,10 @@
   #divx{
     margin-top : 50px;
   }
+  #divx p{
+    flex-wrap : wrap;
+    
+  }
   #divi{
     margin: 20px 10px;
     width: auto;
@@ -161,6 +165,7 @@
         height: clamp(150px,15vw, 250px); /* keep aspect ratio */
     }
 
+
   #boxes{
     flex-direction: column;
     align-items: center;
@@ -188,9 +193,7 @@
     transform: translateY(-100px);
   }
   #copy p{
-    padding : 0;
-    margin : 0;
     margin-bottom : 0;
-    margin-top : clamp(150px,10vw, 350px);
+
   }
 }

@@ -2,29 +2,26 @@
 @import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@500&display=swap');
 #copy {
   display: flex;
-  align-items: center;
-  justify-content: center;
+  flex-direction: row;      /* text left, image right */
+  align-items: flex-start;
+  justify-content: space-between;
   gap: 20px;
-  flex-wrap: nowrap;
   padding: 20px;
+  flex-wrap: wrap;          /* allows wrapping on smaller screens */
 }
 
-/* Paragraph text */
 #copy p {
-  font-family: "Josefin", Courier, sans-serif;
-  font-size: clamp(14px, 2vw, 20px);
+  font-family: 'Josefin Sans', Courier, sans-serif;
+  font-size: clamp(14px, 1.5vw, 18px);
   line-height: 1.5;
-  color: rgb(92, 92, 92);
-  font-weight: 600;
+  max-width: 60ch;          /* controls line length to keep paragraph ~3 lines */
   text-align: left;
-  max-width: 750px;
-  align-items: baseline;
-  margin-bottom : clamp(0px,15vw, 250px);
+  margin: 0;
+  flex: 1;                  /* allows paragraph to take remaining space */
 }
 
-/* Image container */
 #copy img {
-  max-width: 100%;
+  max-width: 40%;            /* image width relative to container */
   height: auto;
   border: 2px solid black;
   object-fit: cover;
@@ -35,6 +32,9 @@
   height: clamp(200px, 25vw, 600px);
   width: clamp(250px, 40vw, 825px);
   position: absolute;
+  z-index: 11;
+  object-fit: cover;
+    object-position: center;
 }
 
 #img2{
@@ -42,6 +42,8 @@
   z-index: 10;
 height : clamp(150px, 15vw, 500px);
 width : clamp(250px, 25vw, 725px);
+object-fit: cover;
+    object-position: center;
 
 }
 #divi main{
@@ -74,7 +76,6 @@ width : clamp(250px, 25vw, 725px);
   justify-content: center;
 }
 #pg{
-    margin-left: auto;
-    margin : 0 100px;
+    margin: 0 auto; /* centers the div */
     padding-bottom : clamp(75px,15vw,150px);
 }

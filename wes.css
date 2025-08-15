@@ -241,6 +241,8 @@ content: "";
   text-align: left;
   margin-right : auto;
   margin-left : auto;
+   align-items: baseline;
+   width : 75ch;
   
 }
 
@@ -515,7 +517,7 @@ content: "";
   display: flex;
   justify-content: center;
   text-align: center;
-
+  margin : auto;
 }
 
 .menu-toggle span:nth-child(1) { top: 0; }
