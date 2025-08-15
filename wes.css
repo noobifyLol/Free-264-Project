@@ -57,7 +57,7 @@ main {
  border-bottom : 2px solid rgb(252, 252, 252);
    justify-content: space-between;
      align-items: center; 
-     border-bottom : 3px solid orange;
+     border-bottom : 3px solid rgb(249, 249, 249);
 }
 
 .dropdown hr{
@@ -118,7 +118,7 @@ align-items: center;
 }
 .dropdown a {
   background-color: rgb(255, 127, 0);
-  border : 1px solid rgb(255, 166, 0);
+  border : 2px solid rgb(12, 12, 12);
   border-radius: 10px;
   color: white;
   text-decoration: none;
@@ -134,7 +134,7 @@ align-items: center;
   font-size: clamp(20px, 2vw, 30px);
   display :  inline-block;
   transition: transform 0.3s ease, box-shadow 0.3s ease; /* smooth animation */
-  border-bottom: 3px solid white; /* this creates the underline below the block */
+  border-bottom: 3px solid rgb(0, 0, 0); /* this creates the underline below the block */
   box-sizing: border-box; /* include border in size calculations */
 }
 
@@ -203,6 +203,7 @@ align-items: center;
   background-repeat: no-repeat;
   background-size: cover;
   animation: floataround 7.5s ease-in-out infinite;
+  box-shadow: 0 2px 5px rgba(0.5, 0.5, 0.5, 0.5);
 
 }
 
@@ -217,7 +218,7 @@ content: "";
 #divx h3{
   z-index : 1;
   position: relative;
-  color: rgb(239, 214, 144);
+  color: rgb(252, 252, 252);
   margin : 5px;
   font-size: clamp(20px, 3vw, 35px);
   font-family: Impact, Haettenschweiler, 'Arial Narrow', sans-serif;
@@ -238,7 +239,7 @@ content: "";
   font-size: clamp(14px, 2vw, 25px);
   letter-spacing: 1px;
   z-index: 1;
-  text-align: left;
+  text-align: center;
   margin-right : auto;
   margin-left : auto;
    align-items: baseline;
