@@ -175,13 +175,12 @@
   }
   
   #copy{
-     flex-direction: row;
-     max-height: 500px;
-     align-items: center;
-     justify-content: center;
-     flex-flow: row;
-       gap: 20px;
-  padding: 20px;
+    flex-direction: column;  /* stack text, then images */
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    gap: 20px;
+    padding: 20px;
   }
   #img1 ,#img2{
      height : clamp(150px, 15vw, 250px);
