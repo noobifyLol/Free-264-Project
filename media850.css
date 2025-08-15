@@ -17,6 +17,8 @@
   .footer-logo,
   .footer-text {
     flex: 1;
+
+
   }
 }
 /* Hide hamburger by default (desktop view) */
@@ -27,7 +29,8 @@
   cursor: pointer;
   padding: 10px;
   transform: translateY(8px);
-  margin-right : 10px;
+  margin-right : 20px;
+  position: relative;
 }
 
 /* Small screen rules */
@@ -74,6 +77,7 @@
     overflow: hidden;
     transition: max-height 0.4s ease;
     z-index: 3;
+    transform: translateX(5px);
     
   }
   .dropdown hr{
@@ -125,6 +129,8 @@
   #divi{
     margin: 20px 10px;
     width: auto;
+     flex-wrap: wrap;
+     max-height: 900px;
   }
    
   .footer-container{
@@ -134,22 +140,27 @@
     flex-direction: column;
     flex-wrap: nowrap;
   }
+  .footer-text{
+    object-fit: cover;
+    align-items: center;
+  }
   .footer-text p{
     margin-left : 95px;
     justify-content: center;
     text-align: center;
+    flex-shrink: 1;
   }
   .footer-text i{
     margin-left : 35px;
   }
   .footer-text a{
-    font-family: 'Orbitron'
+    font-family: 'Orbitron';
   }
   #copy img {
         width : clamp(200px,15vw,350px);
-        max-width: 800px; /* remove limit */
         height: clamp(150px,15vw, 250px); /* keep aspect ratio */
     }
+
   #boxes{
     flex-direction: column;
     align-items: center;
@@ -170,6 +181,8 @@
   #img1 #img2{
      height : clamp(150px, 15vw, 250px);
     width : clamp(250px, 25vw, 325px);
+    object-fit: cover; /* fills the box, cropping if needed */
+  object-position: center;
   }
   #img{
     transform: translateY(-100px);
@@ -177,5 +190,7 @@
   #copy p{
     padding : 0;
     margin : 0;
+    margin-bottom : 0;
+    margin-top : clamp(150px,10vw, 350px);
   }
 }

@@ -1,0 +1,80 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@500&display=swap');
+#copy {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+  flex-wrap: nowrap;
+  padding: 20px;
+}
+
+/* Paragraph text */
+#copy p {
+  font-family: "Josefin", Courier, sans-serif;
+  font-size: clamp(14px, 2vw, 20px);
+  line-height: 1.5;
+  color: rgb(92, 92, 92);
+  font-weight: 600;
+  text-align: left;
+  max-width: 750px;
+  align-items: baseline;
+  margin-bottom : clamp(0px,15vw, 250px);
+}
+
+/* Image container */
+#copy img {
+  max-width: 100%;
+  height: auto;
+  border: 2px solid black;
+  object-fit: cover;
+}
+
+/* Image sizing for desktop */
+#img1 {
+  height: clamp(200px, 25vw, 600px);
+  width: clamp(250px, 40vw, 825px);
+  position: absolute;
+}
+
+#img2{
+  transform: translateX(75px) translateY(35px);
+  z-index: 10;
+height : clamp(150px, 15vw, 500px);
+width : clamp(250px, 25vw, 725px);
+
+}
+#divi main{
+  color : rgb(27, 27, 27);
+  max-height: 550px;
+}
+#divi img{
+  max-width: 300px;
+  max-height: 300px;
+  border: 2px solid black;
+  margin-bottom : clamp(200px, 20vw, 40px);
+  flex : 1;
+}
+
+
+#divi h1{
+  font-size: clamp(20px, 4vw, 30px);
+  font-family: 'Courier New', Courier, monospace;
+  border-bottom : 2px solid white;
+}
+#divi h2{
+    font-size: clamp(25px, 4vw, 45px);
+    font-family: 'Josefin' , sans-serif;
+    font-weight : 600;
+    color-scheme: orange, yellow, white;
+    text-align: center;
+    margin-bottom : 10px;
+}
+#test{
+  justify-content: center;
+}
+#pg{
+    margin-left: auto;
+    margin : 0 100px;
+    padding-bottom : clamp(75px,15vw,150px);
+}
