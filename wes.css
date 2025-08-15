@@ -58,6 +58,7 @@ main {
    justify-content: space-between;
      align-items: center; 
      border-bottom : 3px solid rgb(249, 249, 249);
+
 }
 
 .dropdown hr{
@@ -218,10 +219,11 @@ content: "";
 #divx h3{
   z-index : 1;
   position: relative;
-  color: rgb(252, 252, 252);
+  color: rgb(252, 240, 214);
   margin : 5px;
-  font-size: clamp(20px, 3vw, 35px);
-  font-family: Impact, Haettenschweiler, 'Arial Narrow', sans-serif;
+  font-size: clamp(15px, 3vw, 25px);
+  font-weight : 50;
+  font-family: Haettenschweiler, sans-serif;
 }
 #divx h1  {
   z-index : 1;
@@ -235,9 +237,9 @@ content: "";
   margin-right : 5%;
   margin-top : 30px;
   position : relative;
-  color : rgb(250, 241, 217);
+  color : rgb(247, 247, 247);
   font-size: clamp(14px, 2vw, 25px);
-  letter-spacing: 1px;
+  letter-spacing: 1.2px;
   z-index: 1;
   text-align: center;
   margin-right : auto;
@@ -248,8 +250,8 @@ content: "";
 }
 
 #h2{
-  color : rgb(244, 244, 244);
-  font-weight: 400;
+  color : rgb(255, 241, 172);
+  font-weight: 500;
   font-size: clamp(8px, 2vw, 15px);
   max-width: 90%;
   text-align: center;
