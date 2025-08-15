@@ -177,12 +177,17 @@
   #copy{
      flex-direction: row;
      max-height: 500px;
+     align-items: center;
+     justify-content: center;
+     flex-flow: row;
+       gap: 20px;
+  padding: 20px;
   }
   #img1 ,#img2{
      height : clamp(150px, 15vw, 250px);
-    width : clamp(250px, 25vw, 325px);
-    object-fit: cover; /* fills the box, cropping if needed */
-  object-position: center;
+        width: clamp(200px, 80%, 350px);
+     position: static; /* back in normal flow */
+     margin : auto 0px;
   }
   #img{
     transform: translateY(-100px);

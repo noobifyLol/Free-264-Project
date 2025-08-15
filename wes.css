@@ -677,7 +677,7 @@ content: "";
   text-align: center;
   font-size: clamp(35px, 7vw, 56px);
   font-family: 'Josefin Sans', 'Montserrat', Arial, sans-serif;
-  color : rgb(255, 245, 61);
+  color : rgb(0, 0, 0);
   z-index: 10;
 }
 @keyframes float {

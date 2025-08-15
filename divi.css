@@ -1,5 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@500&display=swap');
+@media (min-width: 850px) {
 #copy {
   display: flex;
   flex-direction: row;      /* text left, image right */
@@ -8,7 +9,7 @@
   padding: 20px;
 
 }
-
+}
 #copy p {
   font-family: 'Josefin Sans', Courier, sans-serif;
   font-size: clamp(14px, 1.5vw, 18px);
