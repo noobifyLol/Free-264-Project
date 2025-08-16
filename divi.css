@@ -1,63 +1,80 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@500&display=swap');
 @media (min-width: 850px) {
+ #copy {
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-evenly;
+  }
+  #img1 , #img2{
+  width : 25%;
+  }
+  #copy{
+    font-size: clamp(18px, 1.5vw, 24px);
+  }
+
+}/* end of min */
+
+@media (min-width : 1520px){
+  #img1 , #img2{
+  width : 300px;
+  }
+}
+
 #copy {
   display: flex;
-  flex-direction: row;      /* text left, image right */
-  align-items: flex-start;
-  gap: 20px;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-evenly;
   padding: 20px;
-
+  text-align: center;
+  flex-wrap: wrap; /* allow wrapping on very small screens */
 }
+
+#pg {
+ display: flex;
+  gap: clamp(10px, 2vw, 30px); /* spacing between images */
+  justify-content: center;
+  align-items: flex-end;        /* staggered vertical alignment */
+  padding: 10px;                /* optional padding inside the box */
+  border-radius: 10px;          /* optional rounded corners */
+  max-width: 800px;
+  margin: 0 auto;
+  flex-wrap: nowrap;            /* keep images side by side */
+}
+
+/* Images themselves */
+#img1, #img2 {
+  flex: 1 1 clamp(150px, 40%, 300px); /* shrink/grow proportionally */
+  max-width: 100%;
+  height: auto;
+  object-fit: contain;
+  border: 2px solid black;
+  display: block;
+}
+#img1{
+align-items: flex-start;
+margin-left : auto;
+  flex-shrink: 1;
+}
+#img2 {
+  align-items: flex-end;
+  flex-shrink: 1;
 }
 #copy p {
   font-family: 'Josefin Sans', Courier, sans-serif;
-  font-size: clamp(14px, 1.5vw, 18px);
-  line-height: 1.5;
-  max-width: 60ch;          /* controls line length to keep paragraph ~3 lines */
-  text-align: left;
-  margin: 0;
-  flex: 1;                  /* allows paragraph to take remaining space */
+  line-height: 1.6;
+  max-width: 70ch;
+  text-align: center;
+  margin: 0 auto;
+  flex: 1 1 300px; /* shrink/grow with images */
 }
 
-#copy img {
-  max-width: 40%;            /* image width relative to container */
-  height: auto;
-  border: 2px solid black;
-  object-fit: cover;
-}
-
-/* Image sizing for desktop */
-#img1 {
-  height: clamp(200px, 25vw, 600px);
-  width: clamp(250px, 40vw, 825px);
-  position: absolute;
-  z-index: 11;
-  object-fit: cover;
-    object-position: center;
-}
-
-#img2{
-  transform: translateX(75px) translateY(35px);
-  z-index: 10;
-height : clamp(150px, 15vw, 500px);
-width : clamp(250px, 25vw, 725px);
-object-fit: cover;
-    object-position: center;
-
-}
 #divi main{
   color : rgb(27, 27, 27);
-  max-height: 550px;
-}
-#divi img{
-  max-width: 300px;
-  max-height: 300px;
-  border: 2px solid black;
-  margin-bottom : clamp(200px, 20vw, 40px);
-  flex : 1;
-}
 
+
+}
 
 #divi h1{
   font-size: clamp(20px, 4vw, 30px);
@@ -71,11 +88,8 @@ object-fit: cover;
     color-scheme: orange, yellow, white;
     text-align: center;
     margin-bottom : 10px;
+    position: relative;
 }
 #test{
   justify-content: center;
-}
-#pg{
-    margin: 0 auto; /* centers the div */
-    padding-bottom : clamp(75px,15vw,150px);
 }

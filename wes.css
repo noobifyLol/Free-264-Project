@@ -219,7 +219,7 @@ content: "";
 #divx h3{
   z-index : 1;
   position: relative;
-  color: rgb(252, 240, 214);
+  color: rgb(249, 227, 180);
   margin : 5px;
   font-size: clamp(15px, 3vw, 25px);
   font-weight : 50;
@@ -250,7 +250,7 @@ content: "";
 }
 
 #h2{
-  color : rgb(255, 241, 172);
+  color : rgb(245, 220, 98);
   font-weight: 500;
   font-size: clamp(8px, 2vw, 15px);
   max-width: 90%;

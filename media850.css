@@ -159,10 +159,6 @@
   .footer-text a{
     font-family: 'Orbitron';
   }
-  #copy img {
-        width : clamp(200px,15vw,350px);
-        height: clamp(150px,15vw, 250px); /* keep aspect ratio */
-    }
 
 
   #boxes{
@@ -178,14 +174,13 @@
     align-items: center;
     justify-content: center;
     text-align: center;
-    gap: 20px;
-    padding: 20px;
   }
-  #img1 ,#img2{
-     height : clamp(150px, 15vw, 250px);
-        width: clamp(200px, 80%, 350px);
-     position: static; /* back in normal flow */
-     margin : auto 0px;
+  #img1 {
+   width : 25%;
+  
+  }
+  #img2 {
+  width : 25%; 
   }
   #img{
     transform: translateY(-100px);
