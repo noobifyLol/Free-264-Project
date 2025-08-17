@@ -1,13 +1,9 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap');
 
-html, body {
-  height: 100%;
-  margin: 0;
+html, body , head{
   background-color: rgb(247, 246, 248);
-    display: flex;
-  flex-direction: column;
-
-
+  margin : 0px;
+  flex: 1; /* Push footer down */
 }
 main{
     flex: 1; /* Push footer down */
@@ -57,7 +53,7 @@ main {
   color: white;
   text-shadow: 2px 2px 4px black;
   background-repeat: no-repeat;
-  padding: 1rem;
+  padding: 1rem 2%; /* Use a percentage for responsive padding */
   position: sticky;
   z-index: 1;
   flex-direction: column;
@@ -87,7 +83,8 @@ main {
 .dropdown a, hr{
   transform: translateY(-35px);
 }
-.dropdown ul {
+
+ ul{
   display: flex;
   text-align: center;
   font-size: 30px;
@@ -97,10 +94,10 @@ main {
   padding: 2px;
   overflow: hidden;
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-  margin-bottom: -120px;
   position :relative;
   z-index: 999;
   flex: 1 1 auto;
+      gap: clamp(1px,5vw,15px); /* Use this for spacing between nav items */
    list-style: none;
 overflow: visible; /* allow items to float without clipping */
 align-items: center;
@@ -108,20 +105,15 @@ align-items: center;
 }
 .logo {
   position : relative;
-   border : 3px solid rgb(68, 67, 67);
+  border : 3px solid rgb(68, 67, 67);
   height: auto;            /* Keep aspect ratio */
-  float : left;
   z-index: 2;
-  align-items: flex-end;
-  transform: translateY(-59px);         /* Remove forced overlap */
-  margin-left: auto; 
+  align-items: center;
   flex-shrink: 1;
   display : block;
-  width: clamp(40px, 8vw, 100px);
-  margin-top:auto;
+  width: clamp(50px, 8vw, 150px);
   margin-left: auto;
-  
-
+  margin-bottom: auto;
 }
 .dropdown a {
   background-color: rgb(255, 127, 0);
@@ -155,11 +147,9 @@ align-items: center;
 #divi {
   position: relative;
   z-index: 1;
-  margin-top: 50px;
+
   color: white;
   box-shadow: 0 0 20px rgba(255, 140, 0, 0.4);
-  margin-top : 50px;
-
   text-align: center;
   /* Combine animated gradient AND texture layers */
   background-image: 
@@ -202,12 +192,13 @@ align-items: center;
   font-family: 'Josefin Sans', sans-serif;
   padding: 65px;
   margin: 15px;
-  min-height: 300px;
   background-image: url(/pictures/top.png);
   background-repeat: no-repeat;
-  background-size: cover;
+  background-size : cover;
+  height : auto;
   animation: floataround 7.5s ease-in-out infinite;
   box-shadow: 0 2px 5px rgba(0.5, 0.5, 0.5, 0.5);
+  margin-bottom: 10%;
 
 }
 

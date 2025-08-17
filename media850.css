@@ -63,7 +63,6 @@
  
   }
   .dropdown ul {
-    position: fixed; /* Changed from absolute to fixed for better mobile behavior */
     flex-direction: column;
     background: rgb(245, 146, 8);
     position: absolute;
@@ -77,7 +76,6 @@
     overflow: hidden;
     transition: max-height 0.4s ease;
     z-index: 3;
-    transform: translateX(5px);
     top : 70px;
     
   }
