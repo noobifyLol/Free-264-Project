@@ -1,5 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@500&display=swap');
+
 @media (min-width: 850px) {
   .footer-container {
     flex-direction: row;
@@ -10,16 +11,18 @@
   }
 
   #divx{
-    flex : 1;
     align-items: center;
   }
   
   .footer-logo,
   .footer-text {
     flex: 1;
-
-
   }
+  #divi{
+    text-align: center;
+      padding: 30px 5%;
+  }
+
 }
 /* Hide hamburger by default (desktop view) */
 .menu-toggle {

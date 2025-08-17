@@ -81,11 +81,13 @@ margin-right: -10%;
   font-size: clamp(20px, 4vw, 30px);
   font-family: 'Courier New', Courier, monospace;
   border-bottom : 2px solid white;
+  font-weight: 100;
+
 }
 #divi h2{
     font-size: clamp(25px, 4vw, 45px);
     font-family: 'Josefin' , sans-serif;
-    font-weight : 600;
+    font-weight : bold;
     color-scheme: orange, yellow, white;
     text-align: center;
     margin-bottom : 10px;

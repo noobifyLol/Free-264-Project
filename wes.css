@@ -3,8 +3,14 @@
 html, body {
   height: 100%;
   margin: 0;
-  background-color: rgb(255, 254, 209)
+  background-color: rgb(247, 246, 248);
+    display: flex;
+  flex-direction: column;
 
+
+}
+main{
+    flex: 1; /* Push footer down */
 }
 /*just need to finish the divi picture and then the boxes for home and then just a nav bar on the side and then you're done you'll work on donate later */
 html::before {
@@ -228,6 +234,7 @@ content: "";
   color: rgb(252, 185, 0);
   margin : 10px;
     font-size: clamp(35px, 4vw, 45px);
+    font-weight: 900;
 }
 #divx p{
   margin-left : 5%;
@@ -295,7 +302,7 @@ content: "";
   padding: 20px 20px;
   font-family: 'Josefin Sans', sans-serif;
   overflow: visible;
-  margin-top : 100px;
+  margin-top: auto; /* Stays at bottom */
 }
 /* Create custom border */
 .footer-container::before {
@@ -670,7 +677,7 @@ content: "";
   transform: translateY(-5px); /* hover floating effect */
 }
 .background{
-  background-color: rgb(245, 245, 209);
+  background-color: rgb(245, 238, 250);
 }
 .background h1{
   position : relative;
@@ -679,6 +686,7 @@ content: "";
   font-family: 'Josefin Sans', 'Montserrat', Arial, sans-serif;
   color : rgb(0, 0, 0);
   z-index: 10;
+  font-size: 500;
 }
 @keyframes float {
   0%, 100% { transform: translateY(0); }
