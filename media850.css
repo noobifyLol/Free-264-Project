@@ -57,12 +57,10 @@
     border: 2px solid rgb(68, 67, 67);
   }
   .dropdown{
-    margin-right: auto;
+ 
   }
   .dropdown ul {
-        
-      position: fixed; /* Changed from absolute to fixed for better mobile behavior */
-    top: 80px;         /* always flex for animation */
+    position: fixed; /* Changed from absolute to fixed for better mobile behavior */
     flex-direction: column;
     background: rgb(245, 146, 8);
     position: absolute;
@@ -71,12 +69,13 @@
     gap: 0;
     width: 100%;
     z-index: 5;
-    white-space: nowrap;
+    text-align: center;
     max-height: 0;               /* hidden initially */
     overflow: hidden;
     transition: max-height 0.4s ease;
     z-index: 3;
     transform: translateX(5px);
+    top : 70px;
     
   }
   .dropdown hr{

@@ -33,7 +33,6 @@
 
 #pg {
  display: flex;
-  gap: clamp(10px, 2vw, 30px); /* spacing between images */
   justify-content: center;
   align-items: flex-end;        /* staggered vertical alignment */
   padding: 10px;                /* optional padding inside the box */
@@ -41,6 +40,7 @@
   max-width: 800px;
   margin: 0 auto;
   flex-wrap: nowrap;            /* keep images side by side */
+  position : relative;
 }
 
 /* Images themselves */
@@ -54,8 +54,9 @@
 }
 #img1{
 align-items: flex-start;
-margin-left : auto;
   flex-shrink: 1;
+margin-right: -10%;
+
 }
 #img2 {
   align-items: flex-end;
