@@ -29,10 +29,12 @@
   display: flex;
   flex-direction: row;
   align-items: center;
-  justify-content: space-evenly;
   padding: 20px;
   text-align: center;
   flex-wrap: wrap; /* allow wrapping on very small screens */
+  justify-content: center;
+  margin: 0 auto;
+  max-width: 1980px;
 }
 
 #pg {
@@ -44,7 +46,7 @@
   max-width: 800px;
   margin: 0 auto;
   flex-wrap: nowrap;            /* keep images side by side */
-  position : relative;
+  position : static;
 
 }
 
@@ -80,8 +82,7 @@ margin-right: -10%;
 
 #divi main{
   color : rgb(27, 27, 27);
-
-
+  text-align: center;
 }
 
 #divi h1{
