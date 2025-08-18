@@ -38,12 +38,12 @@
 @media (max-width : 1000px) {
   .dropdown ul{
     top : 72%;
-        transition: min-height 0.4s ease;
+       
   }
 }
 @media (max-width : 591px){ /* less than 600  more than 590*/
   .dropdown ul{top : 82%;
-      transition: min-height 0.4s ease;}
+      }
 
 }
 /* Small screen rules */
@@ -77,7 +77,7 @@
     text-align: center;
     max-height: 0;               /* hidden initially */
     overflow: hidden;
-    transition: min-height 0.4s ease;
+    transition: max-height 0.4s ease;
     z-index: 100;
     flex : 1;
   }
@@ -87,7 +87,7 @@
   /* Show menu with animation */
   .dropdown ul.show {
     max-height: 400px;           /* expands smoothly */
-    overflow: visible;
+    overflow: hidden;
   }
 
   .menu-toggle {
