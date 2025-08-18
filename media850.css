@@ -35,22 +35,26 @@
   margin-right : 20px;
   position: relative;
 }
-
+@media (max-width : 1000px) {
+  .dropdown ul{
+    top : 72%;
+  }
+}
+@media (max-width : 591px){ /* less than 600  more than 590*/
+  .dropdown ul{top : 82%;}
+}
 /* Small screen rules */
 @media (max-width: 850px) {
   .Homesec1{
-    flex-wrap : nowrap;
+    flex-wrap : wrap;
     height: auto; /* Make height flexible */
     flex-direction: row; /* Keep logo and menu toggle in a row */
     justify-content: space-between;
     align-items: center;
     border-bottom : 3px solid orange;
-    z-index: 999;
+    z-index: 10;
   }
   .logo{
-    transform: translateY(-85px);
-    height: 68%;
-    width : 12%;
     border : 3px solid rgb(68, 67, 67);
     transform: none; /* Remove negative translation */
     position: static;
@@ -59,14 +63,10 @@
     height: 60px;
     border: 2px solid rgb(68, 67, 67);
   }
-  .dropdown{
- 
-  }
   .dropdown ul {
     flex-direction: column;
     background: rgb(245, 146, 8);
     position: absolute;
-    top: 100%;
     left: 0;
     gap: 0;
     width: 100%;
@@ -75,9 +75,8 @@
     max-height: 0;               /* hidden initially */
     overflow: hidden;
     transition: max-height 0.4s ease;
-    z-index: 3;
-    top : 70px;
-    
+    z-index: 100;
+    flex : 1;
   }
   .dropdown hr{
     display :none;
@@ -85,6 +84,7 @@
   /* Show menu with animation */
   .dropdown ul.show {
     max-height: 400px;           /* expands smoothly */
+    overflow: visible;
   }
 
   .menu-toggle {
