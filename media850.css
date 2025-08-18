@@ -146,6 +146,9 @@
   .footer-text{
     object-fit: cover;
     align-items: center;
+    flex-wrap: wrap;
+    margin : 0 auto;
+    transform: translateX(-59px);
   }
   .footer-text p{
     margin-left : 95px;
