@@ -38,10 +38,13 @@
 @media (max-width : 1000px) {
   .dropdown ul{
     top : 72%;
+        transition: max-height 0.4s ease;
   }
 }
 @media (max-width : 591px){ /* less than 600  more than 590*/
-  .dropdown ul{top : 82%;}
+  .dropdown ul{top : 82%;
+      transition: max-height 0.4s ease;}
+
 }
 /* Small screen rules */
 @media (max-width: 850px) {
