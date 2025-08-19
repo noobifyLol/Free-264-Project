@@ -37,12 +37,12 @@
 }
 @media (max-width : 1000px) {
   .dropdown ul{
-    top : 72%;
+    top : 69%;
        
   }
 }
 @media (max-width : 591px){ /* less than 600  more than 590*/
-  .dropdown ul{top : 82%;
+  .dropdown ul{top : 79%;
       }
 
 }
@@ -54,7 +54,6 @@
     flex-direction: row; /* Keep logo and menu toggle in a row */
     justify-content: space-between;
     align-items: center;
-    border-bottom : 3px solid orange;
     z-index: 10;
   }
   .logo{
@@ -68,7 +67,6 @@
   }
   .dropdown ul {
     flex-direction: column;
-    background: rgb(245, 146, 8);
     position: absolute;
     left: 0;
     gap: 0;
@@ -113,12 +111,13 @@
     background-position: 100%;
     padding-left  : 500px;
     padding-right : 500px;
+      font-family: 'Poppins', sans-serif;
   }
   .dropdown a:hover{
-     background-color: rgb(255, 201, 101);
+  background-color: rgb(217, 162, 252);
   color : rgb(52, 52, 52);
     box-shadow: 0 2px 5px rgba(0.5, 0.5, 0.5, 0.5);
-
+  transition: transform 0.3s ease, box-shadow 0.3s ease; /* smooth animation */
   }
   #divx {
     padding: 20px;
