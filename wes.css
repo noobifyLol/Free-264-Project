@@ -1,7 +1,21 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap');
 
 html, body , head{
-  background-color: rgb(225, 197, 253);
+background-image: 
+    linear-gradient(
+      135deg,
+      rgb(223, 176, 253) 0%,
+      rgb(246, 217, 251) 50%,
+      rgb(253, 252, 213) 100%
+    ),
+    linear-gradient(135deg, rgba(255,255,255,0.1) 25%, transparent 25%),
+    linear-gradient(225deg, rgba(255,255,255,0.1) 25%, transparent 25%),
+    linear-gradient(45deg, rgba(255,255,255,0.1) 25%, transparent 25%),
+    linear-gradient(315deg, rgba(255,255,255,0.1) 25%, transparent 25%);
+  
+  background-size: 200% 200%, 40px 40px, 40px 40px, 40px 40px, 40px 40px;
+  background-position: 0% 50%, 0 0, 0 0, 0 0, 0 0;
+  animation: gradientMove 15s ease infinite;
   margin : 0px;
   flex: 1; /* Push footer down */
 }
@@ -156,7 +170,7 @@ align-items: center;
       135deg,
       rgb(251, 250, 221) 0%,
       rgb(246, 217, 251) 50%,
-      rgb(236, 213, 253) 100%
+      rgb(253, 252, 213) 100%
     ),
     linear-gradient(135deg, rgba(255,255,255,0.1) 25%, transparent 25%),
     linear-gradient(225deg, rgba(255,255,255,0.1) 25%, transparent 25%),
@@ -669,7 +683,21 @@ content: "";
   transform: translateY(-5px); /* hover floating effect */
 }
 .background{
-  background-color: rgb(235, 209, 254);
+  background-image: 
+    linear-gradient(
+      135deg,
+      rgb(215, 189, 255) 0%,
+      rgb(255, 253, 196) 50%,
+      rgb(246, 207, 255) 100%
+    ),
+    linear-gradient(135deg, rgba(255,255,255,0.1) 25%, transparent 25%),
+    linear-gradient(225deg, rgba(255,255,255,0.1) 25%, transparent 25%),
+    linear-gradient(45deg, rgba(255,255,255,0.1) 25%, transparent 25%),
+    linear-gradient(315deg, rgba(255,255,255,0.1) 25%, transparent 25%);
+  
+  background-size: 200% 200%, 40px 40px, 40px 40px, 40px 40px, 40px 40px;
+  background-position: 0% 50%, 0 0, 0 0, 0 0, 0 0;
+  animation: gradientMove 15s ease infinite;
 }
 .background h1{
   position : relative;
