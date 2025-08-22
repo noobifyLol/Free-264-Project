@@ -226,6 +226,7 @@ content: "";
   margin : 10px;
     font-size: clamp(35px, 4vw, 45px);
     font-weight: 900;
+    font-family : "Sour Gummy", sans-serif;
 }
 #divx p{
   margin-left : 5%;
@@ -241,6 +242,7 @@ content: "";
   margin-left : auto;
    align-items: baseline;
    width : 75ch;
+
   
 }
 
@@ -261,7 +263,7 @@ content: "";
     border-bottom : 2px solid white;
     padding-bottom: 15px;
     white-space : nowrap;
-
+  font-family: "Truculenta", sans-serif;
 }
 .end .endlogo{
   margin-bottom : 50px;
