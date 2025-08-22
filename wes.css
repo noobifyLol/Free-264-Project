@@ -128,10 +128,10 @@ align-items: center;
   margin-bottom: auto;
 }
 .dropdown a {
-  background-color: rgb(253, 253, 253);
-  border : 2px solid rgb(12, 12, 12);
+  background-color: rgb(130, 247, 255);
+  border : 2px solid rgb(80, 80, 80);
   border-radius: 10px;
-  color: rgb(126, 231, 255);
+  color: rgb(252, 252, 252);
   text-decoration: none;
   padding: 10px;
   transform: translateY(-37px);
