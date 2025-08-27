@@ -121,8 +121,20 @@
   const menu = document.querySelector(".dropdown ul");
   menuToggle.addEventListener("click", () => {
     menu.classList.toggle("show");
-    menuToggle.classList.toggle("open"); // for the hamburger X animation
+        menuToggle.classList.toggle("open"); // for the hamburger X animation
+    if (menu.classList.contains("show")) {
+    menu.style.opacity = "1";
+    menu.style.pointerEvents = "auto";
+  }
+  
+
   });
+  menu.addEventListener('transitionend', () => {
+  if (!menu.classList.contains("show")) {
+    menu.style.opacity = "0";
+    menu.style.pointerEvents = "none";
+  }
+});
   </script>
   <script>document.addEventListener('DOMContentLoaded', () => {
   const boxes = document.querySelectorAll('#boxes .box');
