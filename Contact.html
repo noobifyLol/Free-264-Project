@@ -84,7 +84,24 @@
   const menu = document.querySelector(".dropdown ul");
   menuToggle.addEventListener("click", () => {
     menu.classList.toggle("show");
-    menuToggle.classList.toggle("open"); // for the hamburger X animation
-  });</script>
+        menuToggle.classList.toggle("open"); // for the hamburger X animation
+    if( window.innerWidth <= 850){
+        if (menu.classList.contains("show")) {
+    menu.style.opacity = "1";
+    menu.style.pointerEvents = "auto";
+  }
+}
+  
+
+  });
+  if (window.innerWidth <= 850){
+  menu.addEventListener('transitionend', () => {
+  if (!menu.classList.contains("show")) {
+    menu.style.opacity = "0";
+    menu.style.pointerEvents = "none";
+  }
+});
+  }
+  </script>
 </body>
 </html>
