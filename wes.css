@@ -128,7 +128,7 @@ align-items: center;
   margin-bottom: auto;
 }
 .dropdown a {
-  background-color: rgb(130, 247, 255);
+
   border : 2px solid rgb(80, 80, 80);
   border-radius: 10px;
   color: rgb(252, 252, 252);
@@ -145,7 +145,6 @@ align-items: center;
   font-size: clamp(20px, 2vw, 30px);
   display :  inline-block;
   transition: transform 0.3s ease, box-shadow 0.3s ease; /* smooth animation */
-  border-bottom: 3px solid rgb(0, 0, 0); /* this creates the underline below the block */
   box-sizing: border-box; /* include border in size calculations */
 
 }
