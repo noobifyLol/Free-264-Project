@@ -98,7 +98,7 @@
     text-align: center;
     border-radius: 0;
     border: none;
-    padding: 15px;
+    padding: 10px;
     border-bottom: 1px solid #444;
     z-index: 999;
     font-size: clamp(23px , 2vw, 34px);
@@ -111,7 +111,8 @@
     background-position: 100%;
     padding-left  : 500px;
     padding-right : 500px;
-      font-family: 'Poppins', sans-serif;
+    font-family: 'Poppins', sans-serif;
+    background-color: rgb(205, 151, 255);
   }
   .dropdown a:hover{
   background-color: rgb(217, 162, 252);
