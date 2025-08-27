@@ -48,6 +48,7 @@
 }
 /* Small screen rules */
 @media (max-width: 850px) {
+
   .Homesec1{
     flex-wrap : wrap;
     height: auto; /* Make height flexible */
