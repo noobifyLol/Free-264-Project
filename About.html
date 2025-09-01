@@ -20,8 +20,11 @@
 <body>
   <div class="wrapper">
 <header class="Homesec1">
+    <div class = ch1>
+      <div class = ch>
+      <img src="pictures/freelog.png" alt="Logo" height="100" width="100">
       <h1 class = "mainhead">NWHS Free Store</h1>
-
+      </div>
       <nav class="dropdown">
         <div class="menu-toggle">
   <span></span>
@@ -32,15 +35,16 @@
           <hr>
       <li><a href="/" >Home</a></li>
       <hr>
-      <li><a href="/Donate" >Donate</a></li>
+      <li><a href="/Donate">Donate</a></li>
       <hr>
-      <li><a href="/About" id="active">About us</a></li>
+      <li><a href="/About">About us</a></li>
       <hr>
-      <li><a href="/Contact" >Contact</a></li>
+      <li><a href="/Contact" id = "active">Contact</a></li>
           <hr>
         </ul>
       </nav>
-
+      </div>
+    <img src = "pictures/logo.png" class = "logo" height = '100px' width="100px"> 
     </header>
 
     <div class = progress>
@@ -55,7 +59,7 @@
       <p>&copy; 2025 NWHS Free Store Club</p>
     </div>
     <div class="footer-text">
-      <p>Donate to us if you can! </p>
+      <p>Donate to us lf You Can! </p>
       <div class = div2>
       <i class="fa-solid fa-arrow-right"></i>
       <a href="Donate.html">Donate!</a>
@@ -80,26 +84,29 @@
 <script>  
   const menuToggle = document.querySelector(".menu-toggle");
   const menu = document.querySelector(".dropdown ul");
-  menuToggle.addEventListener("click", () => {
-    menu.classList.toggle("show");
-        menuToggle.classList.toggle("open"); // for the hamburger X animation
-    if( window.innerWidth <= 850){
-        if (menu.classList.contains("show")) {
-    menu.style.opacity = "1";
-    menu.style.pointerEvents = "auto";
+// Start fully hidden
+menu.classList.add("hidden");
+
+menuToggle.addEventListener("click", () => {
+  if (menu.classList.contains("show")) {
+    // start closing
+    menu.classList.remove("show");
+    menu.addEventListener("transitionend", handleClose, { once: true });
+  } else {
+    // opening
+    menu.classList.remove("hidden");          // remove fully hidden state
+    requestAnimationFrame(() => menu.classList.add("show")); // animate open
+  }
+
+  // Hamburger animation
+  menuToggle.classList.toggle("open");
+});
+
+function handleClose(e) {
+  if (e.propertyName === "max-height") {
+    menu.classList.add("hidden"); // fully hidden after transition
   }
 }
-  
-
-  });
-  if (window.innerWidth <= 850){
-  menu.addEventListener('transitionend', () => {
-  if (!menu.classList.contains("show")) {
-    menu.style.opacity = "0";
-    menu.style.pointerEvents = "none";
-  }
-});
-  }
   </script>
 </body>
 </html>

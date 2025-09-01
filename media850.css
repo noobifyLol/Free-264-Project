@@ -1,7 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@500&display=swap');
 
-@media (min-width: 850px) {
+@media (min-width: 851px) {
   .footer-container {
     flex-direction: row;
     justify-content: space-between;
@@ -9,7 +9,8 @@
     text-align: left;
     
   }
-
+  .dropdown ul{
+  }
   #divx{
     align-items: center;
   }
@@ -27,45 +28,47 @@
 /* Hide hamburger by default (desktop view) */
 .menu-toggle {
   display: none;
-  font-size: 35px;
   color: white;
   cursor: pointer;
   padding: 10px;
   transform: translateY(8px);
-  margin-right : 20px;
   position: relative;
-}
-@media (max-width : 1000px) {
-  .dropdown ul{
-    top : 69%;
-       
-  }
-}
-@media (max-width : 591px){ /* less than 600  more than 590*/
-  .dropdown ul{top : 79%;
-      }
+  order : 1;
+  margin-right : 0px;
 
+}
+
+@media(max-width : 450px){
+  .Homesec1{
+  flex-wrap : wrap;
+  }
 }
 /* Small screen rules */
-@media (max-width: 850px) {
-
+@media (max-width: 768px) {
+  
   .Homesec1{
-    flex-wrap : wrap;
     height: auto; /* Make height flexible */
-    flex-direction: row; /* Keep logo and menu toggle in a row */
-    justify-content: space-between;
-    align-items: center;
-    z-index: 10;
+      display: flex;
+  align-items: center;        /* vertically center */
+  justify-content: space-evenly; /* spread evenly across */
+  gap: 20px;                  /* optional spacing */
+  text-align: center;         /* center text inside */
+  flex-direction: row;
+  }
+  .mainhead{
+    font-size: clamp(15px,3vw,25px);
+    width : clamp(200px,10vw, 400px)
   }
   .logo{
-    border : 3px solid rgb(68, 67, 67);
-    transform: none; /* Remove negative translation */
+    border : 3px solid rgb(104, 104, 104);
     position: static;
     margin: 0;
-    width: 60px;
-    height: 60px;
+    width: clamp(95px,5vw,100px);
+    height: clamp(95px,5vw,100px);
     border: 2px solid rgb(68, 67, 67);
+    display: block;
   }
+  
   .dropdown ul {
     flex-direction: column;
     position: absolute;
@@ -74,25 +77,44 @@
     width: 100%;
     z-index: 5;
     text-align: center;
-    max-height: 0;               /* hidden initially */
+    max-height: 0;             /* hidden initially */
     overflow: hidden;
-    transition: max-height 0.4s ease;
-    z-index: 100;
+    transition: max-height 0.6s ease;
+    z-index: 0;
     flex : 1;
+    top : 83%;
+    pointer-events: none;
   }
   .dropdown hr{
     display :none;
   }
-  /* Show menu with animation */
-  .dropdown ul.show {
-    max-height: 400px;           /* expands smoothly */
-    overflow: hidden;
+  .dropdown ul.hidden{
+    display: none;
   }
+  .dropdown ul.show {
+    overflow: hidden;
+    max-height: 400px;
+    pointer-events: auto;
+      transform: translateY(0);
+
+  }
+
 
   .menu-toggle {
     display: block;
   }
-
+  .ch1 {
+    display: flex;
+  }
+  .ch img{
+      height : clamp(95px,10vw, 100px);
+      width : clamp(95px,10vw, 100px);
+      transform: translateX(5px);
+  }
+  .ch{
+    order : 2;
+    transform: translateX(10px);
+  }
   .dropdown a {
     float: none;
     margin: 0px;

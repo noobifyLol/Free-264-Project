@@ -63,7 +63,7 @@ main {
   background-color : rgb(0, 0, 0);
   background-size: cover;
   background-position: center;
-   max-height : clamp(125px,10vw,165px);
+   max-height : clamp(125px,15vw,auto);
   color: white;
   text-shadow: 2px 2px 4px black;
   background-repeat: no-repeat;
@@ -77,25 +77,30 @@ main {
      text-align: center;
 
 }
+.ch1{
+  display: flex;
+  align-items: center;
+  flex-shrink : 1;
+
+}
+.ch{
+  margin-right : 1%;
+  
+}
+.ch img{
+  height : clamp(50px,10vw, 100px);
+  width : clamp(50px,10vw, 100px);
+}
+
 
 .dropdown hr{
   border: none;
   width: 2px;
-    margin: 10px 0;
   background-color: rgb(104, 104, 104); /* vertical separator between links */
   margin-left : auto;
   margin-right : auto;
-   gap: clamp(1px, 2vw, 5px);
   height:clamp(30px, 2vw, 30px);  
   height : 50px; 
-
-
-
-   
-}
-.dropdown a, hr{
-  transform: translateY(-35px);
-
 }
 
   .dropdown ul{
@@ -106,15 +111,18 @@ main {
   white-space: nowrap;
   justify-content: space-between;
   padding: 2px;
+    flex-wrap: nowrap; /* no wrapping by default */
   overflow: hidden;
   position :relative;
   z-index: 999;
   flex: 1 1 auto;
-    gap: clamp(1px,5vw,15px); /* Use this for spacing between nav items */
+    opacity: 1;
+  gap: clamp(1px,1vw,9px); /* Use this for spacing between nav items */
    list-style: none;
 overflow: visible; /* allow items to float without clipping */
 align-items: center;
 }
+
 .logo {
   position : relative;
   border : 3px solid rgb(68, 67, 67);
@@ -122,7 +130,7 @@ align-items: center;
   z-index: 2;
   align-items: center;
   flex-shrink: 1;
-  display : block;
+  display : none;
   width: clamp(50px, 8vw, 150px);
   margin-left: auto;
   margin-bottom: auto;
@@ -134,15 +142,14 @@ align-items: center;
   color: rgb(252, 252, 252);
   text-decoration: none;
   padding: 10px;
-  transform: translateY(-37px);
   display: block;
-  margin : 0px clamp(15px,4vw,50px);
+  margin : 0px clamp(1px,3vw,75px);
   font-family: 'Josefin Sans', 'Montserrat', Arial, sans-serif;
   cursor: pointer;
   flex-shrink: 1;
   text-overflow: ellipsis; 
   padding: 8px 12px 14px 12px;
-  font-size: clamp(20px, 2vw, 30px);
+  font-size: clamp(15px, 2vw, 30px);
   display :  inline-block;
   transition: transform 0.3s ease, box-shadow 0.3s ease; /* smooth animation */
   box-sizing: border-box; /* include border in size calculations */
@@ -188,9 +195,9 @@ align-items: center;
   display: inline-block;           /* makes border wrap text */
   border-bottom: 3px solid #d66dfc;   /* line thickness and color */
   padding-bottom: 5px;   
-  width : 400px;
+  width : clamp(150px, 25vw,400px); /* Width of the border */
   text-align: center;
-  font-size : clamp(30px, 2vw, 50px);
+  font-size : clamp(16px, 2vw, 50px);
   white-space: nowrap;
 }
 #divx{
@@ -225,7 +232,7 @@ content: "";
   margin : 10px;
     font-size: clamp(35px, 4vw, 45px);
     font-weight: 900;
-    font-family : "Sour Gummy", sans-serif;
+    font-family : "Delius Unicase", cursive;
 }
 #divx p{
   margin-left : 5%;
@@ -374,11 +381,10 @@ content: "";
   font-size: clamp(28px, 2vw,38px);                 /* smaller for better balance */
   font-weight: bold;                /* normal weight, not too heavy */
   text-align: center;              /* center looks better in footer */
-  font-family: "Josefin Sans", sans-serif;
+  font-family: "Mynerve", cursive;
   font-optical-sizing: auto;
   font-style: normal;
   letter-spacing: 1px;             /* subtle spacing between letters */
-  font-family: 'Poppins', sans-serif;
 
 }
 
@@ -728,7 +734,7 @@ content: "";
   background-color: rgb(130, 230, 250);
   color : rgb(52, 52, 52);
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.0);
-     transform: translateY(-45px);        /* makes it float up */
+     transform: translateY(-5px);        /* makes it float up */
   box-shadow: 0 5px 15px rgb(176, 131, 48); /* subtle shadow to enhance floating */
 }
 
