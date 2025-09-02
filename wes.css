@@ -663,7 +663,7 @@ content: "";
    z-index: 1;
    font-size: clamp(14px, 2vw, 27px);
 }
-.otherBody{
+.otherbody{
   display : flex;
   flex-direction: row;
   justify-content: center;
@@ -688,12 +688,12 @@ content: "";
   background-position: 0% 50%, 0 0, 0 0, 0 0, 0 0;
   animation: gradientMove 15s ease infinite;
 }
-.otherBody p{
+.otherbody p{
   max-width : 60ch;
   font-family : "Mynerve", cursive;
   padding : 5%;
 }
-.otherBody img{
+.otherbody img{
   border : 2px solid black;
   margin : 1%;
 }
