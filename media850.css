@@ -75,7 +75,7 @@
     left: 0;
     gap: 0;
     width: 100%;
-    z-index: 1000;
+    z-index: 10000;
     text-align: center;
     max-height: 0;             /* hidden initially */
     overflow: hidden;
@@ -96,6 +96,7 @@
     max-height: 400px;
     pointer-events: auto;
       transform: translateY(0);
+      z-index : 10000;
 
   }
 
