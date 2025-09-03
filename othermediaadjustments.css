@@ -4,3 +4,8 @@
     
 }
 }
+@media (max-width : 500xp){ /* for my phone */
+  .logo{
+    display : none;
+  }
+}
