@@ -540,38 +540,7 @@ content: "";
   transform: rotate(-45deg);
   top: 9px;
 }
-#donations {
-  display: flex;
-  gap: 20px;          /* space between cards */
-  flex-wrap : wrap;
-  margin: 40px;
-  position: relative;
-  background: url('pictures/background.png') center/cover;
-  height: 400px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
 
-
-}
-#donations{
-    margin-bottom : 100px;
-}
-#donations .card {
-  background: white;
-  padding: 20px;
-  border-radius: 10px;
-  width: 250px;
-  box-shadow: 0 4px 15px rgba(0,0,0,0.5);
-  transition: transform 0.3s;
-  animation: float 3s ease-in-out infinite;
-  margin-bottom : 0%;
-}
-
-.card h3 {
-  margin-top: 0;
-  font-family: 'Josefin Sans', sans-serif;
-}
 .progress{
     font-family: 'Josefin Sans', sans-serif;
     display : flex;
@@ -710,9 +679,6 @@ content: "";
 #box2:hover{
   transform: translateY(-5px);
   box-shadow: 0 4px 15px rgba(0,0,0,0.7);
-}
-.card:hover {
-  transform: translateY(-5px); /* hover floating effect */
 }
 .background{
   background-image: 
