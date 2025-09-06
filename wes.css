@@ -121,6 +121,7 @@ main {
    list-style: none;
 overflow: visible; /* allow items to float without clipping */
 align-items: center;
+z-index: 999999999;
 }
 
 .logo {
@@ -153,7 +154,7 @@ align-items: center;
   display :  inline-block;
   transition: transform 0.3s ease, box-shadow 0.3s ease; /* smooth animation */
   box-sizing: border-box; /* include border in size calculations */
-
+  z-index: 9999;
 }
 #active{
   background-color: rgb(179, 146, 252);

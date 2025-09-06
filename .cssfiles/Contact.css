@@ -1,0 +1,26 @@
+.location{
+display : flex;
+  flex-direction: row;
+  justify-content: center;
+  text-align: center;
+  flex : 1;
+  margin : 10px;
+  border : 2px solid black;
+  align-items: center;
+  background-image: 
+    linear-gradient(
+      135deg,
+      rgb(248, 251, 238) 0%,
+      rgb(246, 241, 95) 50%,
+      rgb(233, 134, 255) 100%
+    ),
+    linear-gradient(135deg, rgba(255,255,255,0.1) 25%, transparent 25%),
+    linear-gradient(225deg, rgba(255,255,255,0.1) 25%, transparent 25%),
+    linear-gradient(45deg, rgba(255,255,255,0.1) 25%, transparent 25%),
+    linear-gradient(315deg, rgba(255,255,255,0.1) 25%, transparent 25%);
+  
+  background-size: 200% 200%, 40px 40px, 40px 40px, 40px 40px, 40px 40px;
+  background-position: 0% 50%, 0 0, 0 0, 0 0, 0 0;
+  animation: gradientMove 15s ease infinite;
+  z-index: 3;
+}
