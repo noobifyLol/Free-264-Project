@@ -1,5 +1,6 @@
 .location{
 display : flex;
+position : relative;
   flex-direction: row;
   justify-content: center;
   text-align: center;
@@ -22,5 +23,5 @@ display : flex;
   background-size: 200% 200%, 40px 40px, 40px 40px, 40px 40px, 40px 40px;
   background-position: 0% 50%, 0 0, 0 0, 0 0, 0 0;
   animation: gradientMove 15s ease infinite;
-  z-index: 3;
+  z-index: auto;
 }
