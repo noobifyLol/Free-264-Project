@@ -215,8 +215,10 @@
   #img{
     transform: translateY(-100px);
   }
-  .location{
-    display : flex;
-    flex-direction: row;
+  .location img{
+    transform : translatey(-6px);
+  }
+  .location p{
+    max-width: 20ch;
   }
 }
