@@ -75,18 +75,19 @@
     </ul>
   </div>
 
-  <form class="contact-form" action = "/Php/index.php">
+  <form class="contact-form" id="contactForm" action = "ts code/email.ts">
     <label for="name">Your Name</label>
-    <input type="text" id="name" placeholder="Enter your name" required>
+    <input type="text" id="name" name="name" placeholder="Enter your name" required>
 
     <label for="email">Your Email</label>
-    <input type="email" id="email" placeholder="Enter your email" required>
+    <input type="email" id="email" name = "email" placeholder="Enter your email" required>
 
     <label for="message">Your Question</label>
-    <textarea id="message" rows="4" placeholder="Type your question here..." required></textarea>
+    <textarea id="message" rows="4" name = "message" placeholder="Type your question here..." required></textarea>
 
     <button type="submit">Send Question</button>
   </form>
+  <div id="status"></div>
 </section>
 <footer class="footer">
   <div class="footer-container">
@@ -117,7 +118,44 @@
     
   </div>
 </footer>
+<script >
+  const form = document.getElementById('contactForm');
+const statusDiv = document.getElementById('status');
 
+if (form) { // check if form exists
+  form.addEventListener('submit', async (e) => {
+    e.preventDefault();
+
+    // Use type assertion for form elements
+    const formData = {
+      name: (form.elements.namedItem('name')) ,
+      email: (form.elements.namedItem('email')) ,
+      message: (form.elements.namedItem('message')),
+    };
+
+    try {
+      const response = await fetch('/api/contact', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify(formData),
+      });
+
+      const result = await response.json();
+
+      if (result.success) {
+        statusDiv!.textContent = 'Message sent successfully!';
+        form.reset();
+      } else {
+        statusDiv!.textContent = 'Failed to send message.';
+      }
+    } catch (err) {
+      console.error(err);
+      statusDiv!.textContent = 'Error sending message.';
+    }
+  });
+}
+
+ </script>
 <script>  
   const menuToggle = document.querySelector(".menu-toggle");
   const menu = document.querySelector(".dropdown ul");
