@@ -1,6 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@500&display=swap');
-@media (min-width: 850px) {
+@media (min-width: 768px) {
  #copy {
      justify-content: center; /* Horizontally center content */
     align-items: center; /* Vertically center content */
@@ -19,7 +19,7 @@
 
 }/* end of min */
 
-@media (min-width : 1520px){
+@media (min-width : 1200px){
   #img1 , #img2{
   width : 300px;
   }
