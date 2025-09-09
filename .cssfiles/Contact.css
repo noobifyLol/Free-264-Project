@@ -1,6 +1,8 @@
 .center{
   max-width: 1980px;
   padding : 10px;
+  display: flex;
+  justify-content: center;
 }
 .location{
 display : flex;
@@ -14,7 +16,8 @@ position : relative;
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
-  padding : clamp(5px,10vw,50px);
+ padding : clamp(20px,5vw,50px);
+ border-radius: 10px;
   overflow : hidden;
   max-width: 1000px;
   max-height: 525px;
@@ -29,9 +32,6 @@ position : relative;
     margin : 1%;
 }
 .location p{
-  padding : clamp(0px, 1vw,10px);
-  margin : 10px;
-  z-index: 0;
   max-width:30ch;
   font-size: clamp(6px, 2vw, 25px);
   position : relative;
