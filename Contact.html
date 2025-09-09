@@ -75,15 +75,15 @@
     </ul>
   </div>
 
-  <form class="contact-form">
+  <form class="contact-form" action = "/Php/index.php">
     <label for="name">Your Name</label>
-    <input type="text" id="name" placeholder="Enter your name">
+    <input type="text" id="name" placeholder="Enter your name" required>
 
     <label for="email">Your Email</label>
-    <input type="email" id="email" placeholder="Enter your email">
+    <input type="email" id="email" placeholder="Enter your email" required>
 
     <label for="message">Your Question</label>
-    <textarea id="message" rows="4" placeholder="Type your question here..."></textarea>
+    <textarea id="message" rows="4" placeholder="Type your question here..." required></textarea>
 
     <button type="submit">Send Question</button>
   </form>
