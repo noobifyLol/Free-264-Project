@@ -148,7 +148,7 @@ align-items: center;
 }
 .dropdown a {
 
-  border : 2px solid rgb(80, 80, 80);
+  border : 2px solid rgb(0, 0, 0);
   border-radius: 10px;
   color: rgb(252, 252, 252);
   text-decoration: none;
