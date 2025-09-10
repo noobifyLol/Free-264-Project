@@ -18,6 +18,7 @@ background-image:
   animation: gradientMove 15s ease infinite;
   margin : 0px;
   flex: 1; /* Push footer down */
+  width : auto;
 }
 main{
     flex: 1; /* Push footer down */
@@ -75,7 +76,7 @@ main {
      align-items: center; 
      border-bottom : 3px solid rgb(249, 249, 249);
      text-align: center;
-  width : 100%;
+
   
 
 }
@@ -315,6 +316,7 @@ content: "";
   font-family: 'Josefin Sans', sans-serif;
   overflow: visible;
   margin-top: auto; /* Stays at bottom */
+  width : auto;
 }
 /* Create custom border */
 .footer-container::before {

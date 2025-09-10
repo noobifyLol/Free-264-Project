@@ -118,44 +118,44 @@
     
   </div>
 </footer>
-<script >
+<script>
   const form = document.getElementById('contactForm');
-const statusDiv = document.getElementById('status');
+  const statusDiv = document.getElementById('status');
 
-if (form) { // check if form exists
-  form.addEventListener('submit', async (e) => {
-    e.preventDefault();
+  if (form) {
+    form.addEventListener('submit', async (e) => {
+      e.preventDefault();
 
-    // Use type assertion for form elements
-    const formData = {
-      name: (form.elements.namedItem('name')) ,
-      email: (form.elements.namedItem('email')) ,
-      message: (form.elements.namedItem('message')),
-    };
+      // Collect values from the form
+      const formData = {
+        name: form.elements.namedItem('name').value,
+        email: form.elements.namedItem('email').value,
+        message: form.elements.namedItem('message').value,
+      };
 
-    try {
-      const response = await fetch('/api/contact', {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify(formData),
-      });
+      try {
+        const response = await fetch('/api/contact', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify(formData),
+        });
 
-      const result = await response.json();
+        const result = await response.json();
 
-      if (result.success) {
-        statusDiv!.textContent = 'Message sent successfully!';
-        form.reset();
-      } else {
-        statusDiv!.textContent = 'Failed to send message.';
+        if (result.success) {
+          if (statusDiv) statusDiv.textContent = 'Message sent successfully!';
+          form.reset();
+        } else {
+          if (statusDiv) statusDiv.textContent = 'Failed to send message.';
+        }
+      } catch (err) {
+        console.error(err);
+        if (statusDiv) statusDiv.textContent = 'Error sending message.';
       }
-    } catch (err) {
-      console.error(err);
-      statusDiv!.textContent = 'Error sending message.';
-    }
-  });
-}
+    });
+  }
+</script>
 
- </script>
 <script>  
   const menuToggle = document.querySelector(".menu-toggle");
   const menu = document.querySelector(".dropdown ul");
