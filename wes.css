@@ -60,7 +60,7 @@ main {
 .Homesec1 {
   display : flex;
   flex-wrap: nowrap;  
-  background-color : rgb(0, 0, 0);
+  background-image: url(pictures/Homesec.png);
   background-size: cover;
   background-position: center;
    max-height : clamp(125px,15vw,auto);
@@ -75,13 +75,23 @@ main {
      align-items: center; 
      border-bottom : 3px solid rgb(249, 249, 249);
      text-align: center;
+  width : 100%;
+  
 
+}
+.Homesec1::before {
+  content: "";
+  position: absolute;
+  inset: 0; /* top, right, bottom, left = 0 */
+  background: rgba(0, 0, 0, 0.4); /* dark overlay */
+  backdrop-filter: blur(3px);     /* blur background */
+  z-index: 0;
 }
 .ch1{
   display: flex;
   align-items: center;
   flex-shrink : 1;
-
+  z-index : 1;
 }
 .ch{
   margin-right : 1%;
@@ -96,7 +106,7 @@ main {
 .dropdown hr{
   border: none;
   width: 2px;
-  background-color: rgb(104, 104, 104); /* vertical separator between links */
+  background-color: rgb(0, 0, 0); /* vertical separator between links */
   margin-left : auto;
   margin-right : auto;
   height:clamp(30px, 2vw, 30px);  
