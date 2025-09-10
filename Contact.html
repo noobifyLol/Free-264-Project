@@ -145,6 +145,7 @@
         if (result.success) {
           if (statusDiv) statusDiv.textContent = 'Message sent successfully!';
           form.reset();
+          setTimeout(() => window.location.reload(), 2000); // refresh after 2 sec
         } else {
           if (statusDiv) statusDiv.textContent = 'Failed to send message.';
         }

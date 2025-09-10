@@ -1,6 +1,7 @@
 {
   "dependencies": {
     "@sendgrid/mail": "^8.1.5",
-    "@vercel/node": "^5.3.21"
+    "@vercel/node": "^5.3.21",
+    "mailersend": "^2.6.0"
   }
 }
