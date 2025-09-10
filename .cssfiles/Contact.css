@@ -21,6 +21,7 @@ position : relative;
   overflow : hidden;
   max-width: 1000px;
   max-height: 525px;
+  margin-top : 50px;
 
 }
 .location img{
