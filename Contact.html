@@ -120,43 +120,31 @@
     
   </div>
 </footer>
+<script src="https://cdn.jsdelivr.net/npm/emailjs-com@3/dist/email.min.js"></script>
 <script>
-  const form = document.getElementById('contactForm');
-  const statusDiv = document.getElementById('status');
+document.getElementById("contactForm").addEventListener("submit", function(event) {
+  event.preventDefault(); // stop page refresh
 
-  if (form) {
-    form.addEventListener('submit', async (e) => {
-      e.preventDefault();
+  // Collect form values
+  const params = {
+    from_name: document.getElementById("name").value,
+    from_email: document.getElementById("email").value,
+    message: document.getElementById("message").value
+  };
 
-      // Collect values from the form
-      const formData = {
-        name: form.elements.namedItem('name').value,
-        email: form.elements.namedItem('email').value,
-        message: form.elements.namedItem('message').value,
-      };
-
-      try {
-        const response = await fetch('/api/contact', {
-          method: 'POST',
-          headers: { 'Content-Type': 'application/json' },
-          body: JSON.stringify(formData),
-        });
-
-        const result = await response.json();
-
-        if (result.success) {
-          if (statusDiv) statusDiv.textContent = 'Message sent successfully!';
-          form.reset();
-          setTimeout(() => window.location.reload(), 2000); // refresh after 2 sec
-        } else {
-          if (statusDiv) statusDiv.textContent = 'Failed to send message.';
-        }
-      } catch (err) {
-        console.error(err);
-        if (statusDiv) statusDiv.textContent = 'Error sending message.';
-      }
+  // Send with EmailJS
+  emailjs.send("service_fr3sy8j", "template_i6xe8zf", params)
+    .then(function(response) {
+      document.getElementById("status").innerText = "✅ Message sent successfully!";
+        setTimeout(function() {
+    location.reload(); 
+  }, 1500); 
+      console.log("SUCCESS!", response.status, response.text);
+    }, function(error) {
+      document.getElementById("status").innerText = "❌ Failed to send message. Try again later.";
+      console.error("FAILED...", error);
     });
-  }
+});
 </script>
 
 <script>  
