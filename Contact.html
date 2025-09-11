@@ -136,10 +136,11 @@ document.getElementById("contactForm").addEventListener("submit", function(event
   // Send with EmailJS
   emailjs.send("service_fr3sy8j", "template_i6xe8zf", params)
     .then(function(response) {
-      document.getElementById("status").innerText = "✅ Message sent successfully!";
-        setTimeout(function() {
+      setTimeout(function() {
     location.reload(); 
   }, 750); 
+      document.getElementById("status").innerText = "✅ Message sent successfully!";
+        
       console.log("SUCCESS!", response.status, response.text);
     }, function(error) {
       document.getElementById("status").innerText = "❌ Failed to send message. Try again later.";
