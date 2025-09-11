@@ -103,8 +103,33 @@ main {
 .ch img{
   height : clamp(50px,10vw, 100px);
   width : clamp(50px,10vw, 100px);
-}
+  border-radius: 50%; 
+  background: white;   
+  z-index: 1;
 
+}
+.logowrap{
+    position: relative;
+  display: inline-block;
+  border-radius: 50%;
+  overflow: hidden; /* clips image inside circle */
+}
+.logowrap::before {
+  content: "";
+  position: absolute;
+  inset: -4px; /* controls border thickness */
+  border-radius: 50%;
+  background: linear-gradient(
+    45deg,
+    rgb(161, 239, 255),
+    rgb(251, 255, 139),
+    rgb(255, 150, 200),
+    rgb(161, 239, 255) /* repeat first color for smooth loop */
+  );
+  background-size: 300% 300%;   /* make it bigger so it can move */
+  animation: glow2 6s linear infinite;
+  z-index: -1;
+}
 
 .dropdown hr{
   border: none;
@@ -773,6 +798,16 @@ content: "";
     flex: 1;
   }
 }
-
+@keyframes glow2 {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
 
 
