@@ -125,10 +125,11 @@ position : relative;
   padding: 12px;
   border-radius: 8px;
   cursor: pointer;
-  transition: transform 0.3s ease;
+  transition: transform 0.3s cubic-bezier(0.25, 1.5, 0.5, 1);
 }
 
 
 .contact-form button:hover {
-  transform: translateY(-10px); /* move up 10px on hover */
+  transform: translateY(-5px); /* move up 10px on hover */
+  background : #4d46ff;
 }
