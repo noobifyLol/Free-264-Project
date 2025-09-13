@@ -140,7 +140,7 @@ document.getElementById("contactForm").addEventListener("submit", function(event
       console.log("SUCCESS!", response.status, response.text);
             setTimeout(function() {
     location.reload(); 
-  }, 100); 
+  }, 1000); 
     }, function(error) {
       document.getElementById("status").innerText = "❌ Failed to send message. Try again later.";
       console.error("FAILED...", error);

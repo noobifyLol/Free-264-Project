@@ -1,3 +1,5 @@
+//Maybe used later on
+
 import type { VercelRequest, VercelResponse } from '@vercel/node';
 import { MailerSend, EmailParams, Recipient, Sender } from "mailersend";
 

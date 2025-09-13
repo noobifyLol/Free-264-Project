@@ -1,3 +1,4 @@
+# not used !!! 
 <?php
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $to = "noobability21@gmail.com";
