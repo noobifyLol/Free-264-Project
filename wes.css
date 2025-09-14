@@ -164,7 +164,6 @@ align-items: center;
 
 .logo {
   position : relative;
-  border : 3px solid rgb(68, 67, 67);
   height: auto;            /* Keep aspect ratio */
   z-index: 2;
   align-items: center;
@@ -310,7 +309,7 @@ content: "";
     border-bottom : 2px solid white;
     padding-bottom: 15px;
     white-space : nowrap;
-  font-family: "Truculenta", sans-serif;
+  font-family: 'Englebert';
 }
 .end .endlogo{
   margin-bottom : 50px;
