@@ -1,13 +1,18 @@
+
+
+
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
   <link rel="icon" type="image/png" href="pictures/freelog.png">
   <link rel="stylesheet" href="wes.css">
-    <link rel="stylesheet" href=".cssfiles/media850.css">
-    <link rel="stylesheet" href=".cssfiles/divi.css">
+  <link rel="stylesheet" href=".cssfiles/media850.css">
+      <link rel="stylesheet" href=".cssfiles/divi.css">
           <link rel="stylesheet" href=".cssfiles/othermediaadjustments.css">
           <link rel = "stylesheet" href =".cssfiles/donate.css">
           <link rel = "stylesheet" href = ".cssfiles/Contact.css">
+          <link rel = "stylesheet" href = ".cssfiles/about.css">
   <title>Free Store</title>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -23,12 +28,11 @@
 </head>
 
 <body>
-
   <div class="wrapper">
 <header class="Homesec1">
     <div class = ch1>
       <div class = ch>
-        <div class = logowrap>
+      <div class = logowrap>
       <img src="pictures/freelog.png" alt="Logo" height="100" width="100">
       </div>
       <h1 class = "mainhead">NWHS Free Store</h1>
@@ -45,55 +49,21 @@
       <hr>
       <li><a href="/Donate">Donate</a></li>
       <hr>
-      <li><a href="/About" >About us</a></li>
+      <li><a href="/About">About us</a></li>
       <hr>
-      <li><a href="/Contact" id = "active">Contact</a></li>
+      <li><a href="/Contact" >Contact</a></li>
           <hr>
         </ul>
       </nav>
       </div>
     <img src = "pictures/logo.png" class = "logo" height = '100px' width="100px"> 
     </header>
-  
-  
-    <div class = " center">
-      
-    <div class= "location">
-      <p> This is where room 264 is located at. Feel free to come by anytime to visit us, donate unused items, or take what ever you like! Most importantly, please come by to ask us questions if you got any!</p>
-      <div id = map>
-      <h1> Where we are Located</h1>
-      <img src = pictures/map.png height="100px" width = " 100px">
-      </div>
-    </div> 
-    </div>
-    <section class="contact-questions">
-  <h2>💬 Feel Free to Ask Us Here!</h2>
-  <p>Got a question about our Free Store Club? Reach out anytime, we’d love to hear from you!</p>
 
-  <div class="questions-list">
-    <ul>
-      <li>🛍️ How can I donate items?</li>
-      <li>👥 How do I join the Free Store Club?</li>
-      <li>♻️ What kind of items can I take or donate?</li>
-      <li>📅 When are your club hours?</li>
-    </ul>
-  </div>
 
-  <form class="contact-form" id="contactForm">
-    <label for="name">Your Name</label>
-    <input type="text" id="name" name="name" placeholder="Enter your name" required>
+    <h1> Sorry if you wanted to join using the remind app. Unfortunlatey it's not connected right now. But you can come into room 264 and talk to Ms. Asofsky about joining the remind and she will guide you from there.</h1>
 
-    <label for="email">Your Email</label>
-    <input type="email" id="email" name = "email" placeholder="Enter your email" required>
 
-    <label for="message">Your Question</label>
-    <textarea id="message" rows="4" name = "message" placeholder="Type your question here..." required></textarea>
-
-    <button type="submit">Send Question</button>
-  </form>
-  <div id="status"></div>
-</section>
-<footer class="footer">
+    <footer class="footer">
   <div class="footer-container">
     <div class="footer-logo">
       <img src="pictures/freelog.png" alt="Logo" height="100" width="100">
@@ -122,33 +92,6 @@
     
   </div>
 </footer>
-<script src="https://cdn.jsdelivr.net/npm/emailjs-com@3/dist/email.min.js"></script>
-<script>
-  emailjs.init("g8EMLxnVCNOHBerfC");
-document.getElementById("contactForm").addEventListener("submit", function(event) {
-  event.preventDefault(); // stop page refresh
-
-  // Collect form values
-  const params = {
-    from_name: document.getElementById("name").value,
-    from_email: document.getElementById("email").value,
-    message: document.getElementById("message").value
-  };
-
-  // Send with EmailJS
-  emailjs.send("service_fr3sy8j", "template_i6xe8zf", params)
-    .then(function(response) {
-      document.getElementById("status").innerText = "✅ Message sent successfully!";
-      console.log("SUCCESS!", response.status, response.text);
-            setTimeout(function() {
-    location.reload(); 
-  }, 1000); 
-    }, function(error) {
-      document.getElementById("status").innerText = "❌ Failed to send message. Try again later.";
-      console.error("FAILED...", error);
-    });
-});
-</script>
 
 <script>  
   const menuToggle = document.querySelector(".menu-toggle");

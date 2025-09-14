@@ -1,0 +1,51 @@
+.information{
+    display : flex;
+    flex-direction: column;
+    align-items: center;
+     background-image: 
+    linear-gradient(
+      135deg,
+      rgb(232, 230, 191) 0%,
+      rgb(253, 228, 255) 25%,
+      rgb(253, 255, 193) 50%,
+      rgb(253, 233, 255) 75%,
+      rgb(255, 254, 212) 100%
+    ),
+    linear-gradient(135deg, rgba(255,255,255,0.1) 25%, transparent 25%),
+    linear-gradient(225deg, rgba(255,255,255,0.1) 25%, transparent 25%),
+    linear-gradient(45deg, rgba(255,255,255,0.1) 25%, transparent 25%),
+    linear-gradient(315deg, rgba(255,255,255,0.1) 25%, transparent 25%);
+  
+  background-size: 200% 200%, 40px 40px, 40px 40px, 40px 40px, 40px 40px;
+  background-position: 0% 50%, 0 0, 0 0, 0 0, 0 0;
+  animation: gradientMove 15s ease infinite;
+    flex-grow: 0;
+    padding : 30px;
+    z-index: 0;
+
+}
+.information h1,h2{
+    font-family : 'Chelsea Market';
+    color : black;
+}
+
+.information p {
+    font-family: 'Schoolbell';
+    font-size : 25px;
+    color : rgb(132, 134, 90);
+    border : 2px solid black;
+    padding : 10px;
+    letter-spacing: 0.2rem;
+}
+.contrast{
+    color : rgb(255, 64, 242);
+    font-weight : 800;
+}
+.information a{
+    color : blue;
+    font-weight:  800;
+}
+.infromation a:visited {
+  color: blue; 
+  text-decoration: none; 
+}
