@@ -20,34 +20,38 @@ position : relative;
  border-radius: 10px;
   overflow : hidden;
   max-width: 1000px;
-  max-height: 525px;
+  max-height: 750px;
   margin-top : 50px;
 
 }
 .location img{
-  height : clamp(150px, 30vw, 475px);
-  width : clamp(190px, 30vw, 575px);
+  height : clamp(100%, 30vw, 475px);
+  width : clamp(100%, 30vw, 575px);
   border: 4px solid transparent; /* make base transparent */
     border-image: linear-gradient(45deg, rgb(161, 239, 255), rgb(251, 255, 139)) 1;
   animation: glow 5s linear infinite;
     margin : 1%;
 }
 .location p{
-  max-width:30ch;
-  font-size: clamp(6px, 2vw, 25px);
+  max-width:28ch;
+  font-size: clamp(16px, 2vw, 28px);
   position : relative;
   text-align: center;
   margin-right : auto;
   margin-left : auto;
    align-items: baseline;
-     font-family: "Comic Relief", system-ui;
-     color : rgb(206, 107, 255);
-     border : 4px solid rgb(184, 183, 183);
+     font-family: "Mynerve", 'Merriweather';
+     color : rgb(170, 0, 255);
      border-radius : 15px;
+    background-color: #f4f3cd;
+    background-blend-mode: color;
+    background-clip: border-box;
+    flex-wrap: wrap;
 }
 #map h1{
     font-family: "Kranky", serif;
-    font-size: clamp(10px, 4vw, 50px);
+    font-size: clamp(25px, 4vw, 50px);
+    flex-wrap : wrap;
 }
 @keyframes glow {
   0% { border-image-source: linear-gradient(45deg, rgb(161, 239, 255), rgb(86, 193, 255)); }
