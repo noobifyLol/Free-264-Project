@@ -12,10 +12,7 @@ position : relative;
   text-align: center;
   flex-grow: 0;
   align-items: center;
-  background-image: url(/pictures/scale.png);
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
+  background-color: #cecdff;
  padding : clamp(20px,5vw,50px);
  border-radius: 10px;
   overflow : hidden;
@@ -25,16 +22,16 @@ position : relative;
 
 }
 .location img{
-  height : clamp(100%, 30vw, 475px);
-  width : clamp(100%, 30vw, 575px);
+  height : clamp(100px, 30vw, 475px);
+  width : clamp(100px, 30vw, 575px);
   border: 4px solid transparent; /* make base transparent */
     border-image: linear-gradient(45deg, rgb(161, 239, 255), rgb(251, 255, 139)) 1;
   animation: glow 5s linear infinite;
     margin : 1%;
 }
 .location p{
-  max-width:28ch;
-  font-size: clamp(16px, 2vw, 28px);
+  max-width:25ch;
+  font-size: clamp(16px, 2vw, 35px);
   position : relative;
   text-align: center;
   margin-right : auto;
