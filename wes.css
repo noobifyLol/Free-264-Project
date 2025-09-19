@@ -201,7 +201,7 @@ align-items: center;
   z-index: 1;
 
   color: white;
-  box-shadow: 0 0 20px rgba(255, 140, 0, 0.4);
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.4);
   text-align: center;
   /* Combine animated gradient AND texture layers */
   background-image: 
@@ -296,7 +296,6 @@ content: "";
   color : rgb(245, 220, 98);
   font-weight: 500;
   font-size: clamp(8px, 2vw, 15px);
-  max-width: 90%;
   text-align: center;
   margin-top : -10px;
   flex-wrap: nowrap;
@@ -308,7 +307,6 @@ content: "";
     display: inline-block;
     border-bottom : 2px solid white;
     padding-bottom: 15px;
-    white-space : nowrap;
   font-family: 'Englebert';
 }
 .end .endlogo{
