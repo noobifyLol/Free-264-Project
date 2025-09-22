@@ -199,7 +199,8 @@ align-items: center;
 #divi {
   position: static;
   z-index: 1;
-
+  margin : 20px auto;
+  max-width: 1400px;
   color: white;
   box-shadow: 0 0 20px rgba(0, 0, 0, 0.4);
   text-align: center;
@@ -241,17 +242,23 @@ align-items: center;
 }
 #divx{
    position: relative;
-   padding : 10%; 
-   margin : 20px;
+   display : flex;
+   flex-direction: column;
+   padding : 100px; 
+   max-width : 1150px;
+   line-break: 1;
+  margin: 20px;
+  margin : 20px auto;
   text-align: center;
   font-family: 'Josefin Sans', sans-serif;
   background-image: url(/pictures/top.png);
   background-repeat: no-repeat;
-  background-size : cover;
-  height : auto;
   animation: floataround 7.5s ease-in-out infinite;
   box-shadow: 0 2px 5px rgba(0.5, 0.5, 0.5, 0.5);
   margin-bottom: 3%;
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
 
 }
 
@@ -274,22 +281,33 @@ content: "";
   font-family: "DynaPuff", system-ui;
 }
 #divx p{
-  margin-left : 5%;
-  margin-right : 5%;
+  margin: 30px auto;
+  padding: 0 10px;
   margin-top : 30px;
   position : relative;
   color : rgb(247, 247, 247);
   font-size: clamp(14px, 2vw, 25px);
   letter-spacing: 1.2px;
+    line-height: 1.55;
   z-index: 1;
   text-align: center;
   margin-right : auto;
   margin-left : auto;
    align-items: baseline;
-   width : 75ch;
      font-family: "Comic Relief", system-ui;
+     flex-wrap: wrap;
+     white-space: wrap;
 
   
+}
+
+#divx img{
+  width: 35%;          /* scales horizontally */
+  max-width: 1000px;   /* optional cap */
+  height: auto;        /* keeps proportions */
+  display: block;
+  margin: 0 auto;      /* center */
+  z-index: 1;
 }
 
 #h2{
@@ -341,6 +359,7 @@ content: "";
   overflow: visible;
   margin-top: auto; /* Stays at bottom */
   width : auto;
+
 }
 /* Create custom border */
 .footer-container::before {
@@ -386,7 +405,7 @@ content: "";
     rgb(255, 201, 100) 0px 20px,  /* 20px yellow stripe */
     rgb(249, 234, 151) 20px 40px /* 20px black stripe */
   ) 30;             /* slice the gradient to repeat */
- 
+
 }
 
 .footer-logo img {
@@ -478,6 +497,10 @@ content: "";
   transition: transform 0.3s;
   transform: translateY(-5px);
 }
+#right {
+
+  padding : 3px;
+}
 
 .footer-contact {
   display: flex;
@@ -560,6 +583,8 @@ content: "";
   justify-content: center;
   text-align: center;
   margin : auto;
+  flex-shrink : 1;
+  z-index: 1;
 }
 
 .menu-toggle span:nth-child(1) { top: 0; }
@@ -744,7 +769,23 @@ content: "";
   z-index: 10;
   font-size: 500;
 }
-
+#donatebuttons{
+    flex: 1;
+  padding: 3px;
+  font-size: clamp(12px,2vw,25px);
+  color: rgb(255, 255, 255);
+  font-family: 'Orbitron';
+  background-color: rgb(247, 199, 255);
+  border-radius: 10px;
+  cursor: pointer;
+  transition : ease-in 0.3s;
+  text-align : center;
+   font-optical-sizing: auto;
+  font-weight: weight;
+  font-style: normal;
+  border : clamp(1px,1vw,4px) solid black;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
 @keyframes float {
   0%, 100% { transform: translateY(0); }
   50% { transform: translateY(-10px); }

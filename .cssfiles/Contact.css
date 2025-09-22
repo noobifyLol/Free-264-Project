@@ -12,7 +12,7 @@ position : relative;
   text-align: center;
   flex-grow: 0;
   align-items: center;
-  background-color: #cecdff;
+  background-color: #e4e3ff;
  padding : clamp(20px,5vw,50px);
  border-radius: 10px;
   overflow : hidden;

@@ -148,10 +148,10 @@
     padding: 20px;
     margin: 20px 10px;
     width: auto;
+    flex-direction: column;
+      margin-top : 50px;
   }
-  #divx{
-    margin-top : 50px;
-  }
+
   #divx p{
     flex-wrap : wrap;
     
@@ -224,5 +224,10 @@
   }
   .donations .card{
     margin-bottom: 100px;
+  }
+  .center{
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
   }
 }

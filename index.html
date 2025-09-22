@@ -59,10 +59,13 @@
     
     <h1> Free Store Club Room 264</h1>
     <h2 id = h2> The official website of NWHS Free Store Club</h2>
-
+      <div >
     <div class = center>
-    <p> We are the Northwest High School Free Store Club. Located in room 264, we are a non-profit club that serves as an outlet for storing and giving out schools supplies, trinkets, and <span style = 'font-weight: bold; font-family:Fuzzy Bubbles; color : rgb(253, 244, 162)'>AP Books! </span> We take in all types of donations! Feel free to drop by Room 264 and donate or drop off any items!
+       <img src = "pictures/mainb.png">
+    <p> We are the Northwest High School Free Store Club. Located in room 264, we are a non-profit club that serves as an outlet for storing and giving out schools supplies, trinkets, and <span style = 'font-weight: bold; font-family:Fuzzy Bubbles; color : rgb(253, 244, 162)'>AP Books! </span> We take in all types of donations! Feel free to drop by Room 264 and <a id = donatebuttons>donate</a> or drop off any items!
  </p>
+
+</div>
     </div>
     </div>
     </div>
@@ -86,11 +89,11 @@
   <h1> How we Operate</h1>
 <div id = boxes>
   <div class = box id = box1>
-    <img src = "pictures/pro.png">
+    <img src = "pictures/mainb.png">
   <p> The Free Store Club takes in donations from across the school and community to organize and put them up for anybody to take. Many donations such as notebooks come in as used, and we renew those supplies to prevent them from being thrown out. </p>
 </div>
 <div class = box id = box2 >
-  <img src = "pictures/pro.png">
+  <img src = "pictures/mainb.png">
   <p>  During the school year, we set up malls and giveaways for various types of items. We host annual giveaways for jewelry, books, and school supplies!</p>
 </div> <!--- box2 end --->
 
@@ -101,7 +104,7 @@
     <div class="footer-logo">
       <img src="pictures/freelog.png" alt="Logo" height="100" width="100">
       <p>Non-Profit Club</p>
-      <p>&copy; 2025 NWHS Free Store Club</p>
+      <p id = right >&copy; 2025 NWHS Free Store Club</p>
     </div>
     <div class="footer-text">
       <p>Donate to us lf You Can! </p>
@@ -129,27 +132,27 @@
 <script>  
   const menuToggle = document.querySelector(".menu-toggle");
   const menu = document.querySelector(".dropdown ul");
-// Start fully hidden
+
 menu.classList.add("hidden");
 
 menuToggle.addEventListener("click", () => {
   if (menu.classList.contains("show")) {
-    // start closing
+
     menu.classList.remove("show");
     menu.addEventListener("transitionend", handleClose, { once: true });
   } else {
-    // opening
-    menu.classList.remove("hidden");          // remove fully hidden state
-    requestAnimationFrame(() => menu.classList.add("show")); // animate open
+
+    menu.classList.remove("hidden");          
+    requestAnimationFrame(() => menu.classList.add("show")); 
   }
 
-  // Hamburger animation
+
   menuToggle.classList.toggle("open");
 });
 
 function handleClose(e) {
   if (e.propertyName === "max-height") {
-    menu.classList.add("hidden"); // fully hidden after transition
+    menu.classList.add("hidden"); 
   }
 }
   </script>
@@ -162,7 +165,7 @@ function handleClose(e) {
     entries.forEach(entry => {
       if (entry.isIntersecting) {
         entry.target.classList.add('show');
-        observer.unobserve(entry.target); // animate only once
+        observer.unobserve(entry.target); 
       }
     });
   }, { threshold: 0.1 });

@@ -100,27 +100,27 @@
 <script>  
   const menuToggle = document.querySelector(".menu-toggle");
   const menu = document.querySelector(".dropdown ul");
-// Start fully hidden
+
 menu.classList.add("hidden");
 
 menuToggle.addEventListener("click", () => {
   if (menu.classList.contains("show")) {
-    // start closing
+
     menu.classList.remove("show");
     menu.addEventListener("transitionend", handleClose, { once: true });
   } else {
-    // opening
-    menu.classList.remove("hidden");          // remove fully hidden state
-    requestAnimationFrame(() => menu.classList.add("show")); // animate open
+
+    menu.classList.remove("hidden");
+    requestAnimationFrame(() => menu.classList.add("show")); 
   }
 
-  // Hamburger animation
+
   menuToggle.classList.toggle("open");
 });
 
 function handleClose(e) {
   if (e.propertyName === "max-height") {
-    menu.classList.add("hidden"); // fully hidden after transition
+    menu.classList.add("hidden"); 
   }
 }
   </script>

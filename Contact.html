@@ -126,16 +126,16 @@
 <script>
   emailjs.init("g8EMLxnVCNOHBerfC");
 document.getElementById("contactForm").addEventListener("submit", function(event) {
-  event.preventDefault(); // stop page refresh
+  event.preventDefault(); 
 
-  // Collect form values
+
   const params = {
     from_name: document.getElementById("name").value,
     from_email: document.getElementById("email").value,
     message: document.getElementById("message").value
   };
 
-  // Send with EmailJS
+
   emailjs.send("service_fr3sy8j", "template_i6xe8zf", params)
     .then(function(response) {
       document.getElementById("status").innerText = "✅ Message sent successfully!";
@@ -153,27 +153,27 @@ document.getElementById("contactForm").addEventListener("submit", function(event
 <script>  
   const menuToggle = document.querySelector(".menu-toggle");
   const menu = document.querySelector(".dropdown ul");
-// Start fully hidden
+
 menu.classList.add("hidden");
 
 menuToggle.addEventListener("click", () => {
   if (menu.classList.contains("show")) {
-    // start closing
+
     menu.classList.remove("show");
     menu.addEventListener("transitionend", handleClose, { once: true });
   } else {
-    // opening
-    menu.classList.remove("hidden");          // remove fully hidden state
-    requestAnimationFrame(() => menu.classList.add("show")); // animate open
+
+    menu.classList.remove("hidden");      
+    requestAnimationFrame(() => menu.classList.add("show")); 
   }
 
-  // Hamburger animation
+
   menuToggle.classList.toggle("open");
 });
 
 function handleClose(e) {
   if (e.propertyName === "max-height") {
-    menu.classList.add("hidden"); // fully hidden after transition
+    menu.classList.add("hidden"); 
   }
 }
   </script>
