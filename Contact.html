@@ -54,17 +54,33 @@
       </div>
     <img src = "pictures/logo.png" class = "logo" height = '100px' width="100px"> 
     </header>
-  
-  
-    <div class = " center">
+    <div class = " center"> 
       
-    <div class= "location">
-      <p> This is where room 264 is located at. Feel free to come by anytime to visit us, donate unused items, or take what ever you like! Most importantly, please come by to ask us questions if you got any!</p>
-      <div id = map>
-      <h1> Where we are Located</h1>
-      <img src = pictures/map.png height="100px" width = " 100px">
-      </div>
-    </div> 
+    <section class="location" aria-labelledby="location-heading">
+  <div class="location-media">
+        <img src = 'pictures/map.png'>
+  </div>
+
+  <div class="location-info">
+    <h2 id="location-heading">Where to find us — Room 264</h2>
+
+    <p class="lead">
+      Swing by Room 264 to donate supplies or pick up items. We accept school supplies,
+      trinkets, and AP books — all free to students in need.
+    </p>
+
+    <ul class="location-meta">
+      <li><strong>Address:</strong> Northwest High School Germantown MD — Room 264</li>
+    </ul>
+
+    <div class="location-actions">
+      <a class="btn primary" href="https://maps.google.com?q=Northwest+High+School" target="_blank" rel="noopener noreferrer">Open in Google Maps</a>
+      <button class="btn ghost" id="openMapBtn" type="button">View Full Map</button>
+    </div>
+  </div>
+</section>
+
+
     </div>
     <section class="contact-questions">
   <h2>💬 Feel Free to Ask Us Here!</h2>
@@ -123,6 +139,7 @@
   </div>
 </footer>
 <script src="https://cdn.jsdelivr.net/npm/emailjs-com@3/dist/email.min.js"></script>
+<script src="map.ts"></script>
 <script>
   emailjs.init("g8EMLxnVCNOHBerfC");
 document.getElementById("contactForm").addEventListener("submit", function(event) {
