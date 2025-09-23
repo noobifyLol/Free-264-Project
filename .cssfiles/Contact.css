@@ -18,6 +18,7 @@
 
 .location{
   display: grid;
+  position: static;
   grid-template-columns: 1fr 1fr;
   align-items: center;
   background: linear-gradient(180deg, rgba(228,227,255,0.9), rgba(255,255,255,0.9));
@@ -28,6 +29,7 @@
   margin: 50px auto;
   overflow: hidden;
   box-sizing: border-box;
+  z-index: -100;
 }
 
 
@@ -35,7 +37,6 @@
   display: flex;
   justify-content: center;
   align-items: center;
-
   width: 100%;
   box-sizing: border-box;
 }

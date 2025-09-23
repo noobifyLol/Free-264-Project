@@ -129,49 +129,11 @@
   </div>
 </footer>
 </div>
-<script>  
-  const menuToggle = document.querySelector(".menu-toggle");
-  const menu = document.querySelector(".dropdown ul");
-
-menu.classList.add("hidden");
-
-menuToggle.addEventListener("click", () => {
-  if (menu.classList.contains("show")) {
-
-    menu.classList.remove("show");
-    menu.addEventListener("transitionend", handleClose, { once: true });
-  } else {
-
-    menu.classList.remove("hidden");          
-    requestAnimationFrame(() => menu.classList.add("show")); 
-  }
-
-
-  menuToggle.classList.toggle("open");
-});
-
-function handleClose(e) {
-  if (e.propertyName === "max-height") {
-    menu.classList.add("hidden"); 
-  }
-}
+<script src = 'ts code/menu.js'>  
   </script>
 
 
-  <script>document.addEventListener('DOMContentLoaded', () => {
-  const boxes = document.querySelectorAll('#boxes .box');
-
-  const observer = new IntersectionObserver(entries => {
-    entries.forEach(entry => {
-      if (entry.isIntersecting) {
-        entry.target.classList.add('show');
-        observer.unobserve(entry.target); 
-      }
-    });
-  }, { threshold: 0.1 });
-
-  boxes.forEach(box => observer.observe(box));
-});</script>
+  <script src = 'ts code/domload.js'> </script>
 
 
 </body>

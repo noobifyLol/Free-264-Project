@@ -21,7 +21,7 @@
   animation: gradientMove 15s ease infinite;
   padding: 40px;
   border-radius: 16px;
-  z-index: 1;
+  z-index: 0;
 }
 
 .information h1,
