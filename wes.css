@@ -732,8 +732,8 @@ content: "";
   margin : 1%;
 }
 #boxes img{
-  height: clamp(200px, 10vw, 250px);
-  width : auto;
+  height: auto;
+  width : 100%;
 }
 #boxes .box.show:hover{
    transform: translateX(0px) translateY(-5px);
