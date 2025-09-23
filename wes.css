@@ -386,7 +386,7 @@ content: "";
 /* Make content stay above the pseudo-border */
 .footer-container > * {
   position: relative;
-  z-index: 1;
+  z-index: 0;
 }
 .footer-container {
   display: flex;

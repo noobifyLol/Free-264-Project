@@ -54,6 +54,7 @@
       </div>
     <img src = "pictures/logo.png" class = "logo" height = '100px' width="100px"> 
     </header>
+    
     <div class = " center"> 
       
     <section class="location" aria-labelledby="location-heading">
@@ -79,6 +80,13 @@
     </div>
   </div>
 </section>
+  <div id = buttonpopup>
+    <img src= "pictures/map.png">
+    <button id = close>
+      <span id = child1></span>
+      <span id = child2></span>
+    </button>
+</div>
 
 
     </div>
@@ -139,7 +147,7 @@
   </div>
 </footer>
 <script src="https://cdn.jsdelivr.net/npm/emailjs-com@3/dist/email.min.js"></script>
-<script src="map.ts"></script>
+<script src="ts code/map.js"></script>
 <script>
   emailjs.init("g8EMLxnVCNOHBerfC");
 document.getElementById("contactForm").addEventListener("submit", function(event) {

@@ -1,8 +1,9 @@
-.information{
-    display : flex;
-    flex-direction: column;
-    align-items: center;
-     background-image: 
+.information {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 30px;
+  background-image: 
     linear-gradient(
       135deg,
       rgb(232, 230, 191) 0%,
@@ -15,37 +16,48 @@
     linear-gradient(225deg, rgba(255,255,255,0.1) 25%, transparent 25%),
     linear-gradient(45deg, rgba(255,255,255,0.1) 25%, transparent 25%),
     linear-gradient(315deg, rgba(255,255,255,0.1) 25%, transparent 25%);
-  
   background-size: 200% 200%, 40px 40px, 40px 40px, 40px 40px, 40px 40px;
   background-position: 0% 50%, 0 0, 0 0, 0 0, 0 0;
   animation: gradientMove 15s ease infinite;
-    flex-grow: 0;
-    padding : 30px;
-    z-index: 0;
-
+  padding: 40px;
+  border-radius: 16px;
+  z-index: 1;
 }
-.information h1,h2{
-    font-family : 'Chelsea Market';
-    color : black;
+
+.information h1,
+.information h2 {
+  font-family: 'Chelsea Market', cursive;
+  color: #2a1454;
+  margin-bottom: 10px;
 }
 
 .information p {
-    font-family: 'Schoolbell';
-    font-size : 25px;
-    color : rgb(132, 134, 90);
-    border : 2px solid black;
-    padding : 10px;
-    letter-spacing: 0.2rem;
+  font-family: 'Schoolbell', cursive;
+  font-size: 18px;
+  color: rgb(90, 92, 62);
+  background: rgba(255,255,255,0.7);
+  border-radius: 10px;
+  padding: 15px;
+  line-height: 1.5;
+  letter-spacing: 0.05rem; /* less aggressive */
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
 }
-.contrast{
-    color : rgb(255, 64, 242);
-    font-weight : 800;
+
+.contrast {
+  color: rgb(255, 64, 242);
+  font-weight: 800;
 }
-.information a{
-    color : blue;
-    font-weight:  800;
+
+.information a {
+  color: #5d3cff;
+  font-weight: 800;
+  text-decoration: none;
 }
-.infromation a:visited {
-  color: blue; 
-  text-decoration: none; 
+
+.information a:hover {
+  text-decoration: underline;
+}
+
+.information a:visited {
+  color: #7a58ff; /* subtle difference for visited */
 }

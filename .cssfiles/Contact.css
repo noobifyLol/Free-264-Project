@@ -30,7 +30,7 @@
   box-sizing: border-box;
 }
 
-/* Make sure this is loaded last (or use !important as last resort) */
+
 .location-media {
   display: flex;
   justify-content: center;
@@ -40,9 +40,11 @@
   box-sizing: border-box;
 }
 
-/* Target the actual <img> and force the size */
+
 .location-media img {
-  width: 100px ;  
+  width: 400px ; 
+  border : 2px solid black;
+  border-radius: 15px; 
   height: auto ;  
   max-width: none;
   display: block;      
@@ -85,10 +87,11 @@
 
 
 .location-actions{
-  margin-top: 18px;
+  margin-top: 30px;
   display:flex;
   gap: 12px;
   flex-wrap:wrap;
+
 }
 
 .btn{
@@ -114,8 +117,60 @@
 
 .btn.ghost{
   background: transparent;
-  border: 1px solid rgba(42,20,84,0.08);
+  border: 1px solid rgba(32, 15, 63, 0.262);
   color: var(--text);
+}
+#buttonpopup{
+  display : none;
+  position: fixed;     
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0,0,0,0.5);  
+  backdrop-filter: blur(5px);  
+  justify-content: center;      
+  align-items: center;
+  z-index: 1000;
+}
+#buttonpopup img{
+  max-width: 80%;
+  max-height: 80%;
+  border-radius: 15px;
+  border: 2px solid black;
+  background: white;
+  z-index: 1001; 
+
+}
+#close {
+  position: absolute;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  z-index: 1002;
+}
+
+#close span {
+  position: absolute;
+  width: 24px;
+  height: 3px;
+  background: white;
+  border-radius: 2px;
+  transform-origin: center;
+}
+
+#close span:first-child {
+  transform: translate(-50%, -50%) rotate(45deg);
+}
+
+#close span:last-child {
+  transform: translate(-50%, -50%) rotate(-45deg);
+}
+#buttonpopup.showt{
+  display : flex;
+  flex-direction: column;
+  justify-content: center;
+  position: fixed;
 }
 
 
@@ -124,9 +179,13 @@
     grid-template-columns: 1fr;
     padding: clamp(14px, 4vw, 28px);
   }
+
   .location-media{ order: -1; } 
   .location-info h2{ text-align: center; }
-  .location-actions{ justify-content: center; }
+  .location-actions{ 
+    justify-content: center; 
+    margin-top : 15px;
+  }
 }
 
 @keyframes glow {
@@ -156,7 +215,7 @@
   animation: gradientMove 15s ease infinite;
   border-radius: 12px;
   box-shadow: 0 4px 10px rgba(0,0,0,0.1);
-  z-index : 1;
+  z-index : 0;
 }
 .contact-questions p{
   font-family: "Comic Relief" , serif;
